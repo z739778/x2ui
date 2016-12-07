@@ -1,0 +1,61 @@
+@import "../../base/fn";
+@import "x2ui-btn_global";
+@import "x2ui-btn_default";
+@import "x2ui-btn_primary";
+@import "x2ui-btn_warn";
+@import "x2ui-btn_disabled";
+@import "x2ui-btn_plain";
+
+button, input {
+    &.x2ui-btn {
+        width: 100%;
+        border-width: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        &:focus {
+            outline: 0;
+        }
+    }
+    &.x2ui-btn_inline,&.x2ui-btn_mini {
+        width: auto;
+    }
+    &.x2ui-btn_plain-primary,&.x2ui-btn_plain-default{
+        // border-width: 1px;
+        background-color: transparent;
+    }
+}
+
+.x2ui-btn_mini {
+    display: inline-block;
+    padding: 0 1.32em;
+    line-height: $x2uiBtnMiniHeight;
+    font-size: $x2uiBtnMiniFontSize;
+}
+
+
+/*gap between btn*/
+.x2ui-btn + .x2ui-btn {
+    margin-top: $x2uiBtnDefaultGap;
+}
+
+.x2ui-btn.x2ui-btn_inline + .x2ui-btn.x2ui-btn_inline {
+    margin-top: auto;
+    margin-left: $x2uiBtnDefaultGap;
+}
+
+.x2ui-btn-area {
+    margin: $x2uiCellsMarginTop $x2uiBtnDefaultGap .3em; 
+}
+.x2ui-btn-area_inline {
+    display: flex;
+    .x2ui-btn {
+        margin-top: auto;
+        margin-right: $x2uiBtnDefaultGap;
+        width: 100%;
+        flex: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+

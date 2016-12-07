@@ -1,0 +1,90 @@
+@import "../../../base/fn";
+
+.x2ui-form-preview{
+    position: relative;
+    background-color: #FFFFFF;
+    &:before{
+        @include setTopLine($x2uiCellBorderColor);
+    }
+    &:after{
+        @include setBottomLine($x2uiCellBorderColor);
+    }
+}
+.x2ui-form-preview__hd{
+    position: relative;
+    padding: $x2uiCellGapV $x2uiCellGapH;
+    text-align: right;
+    line-height: 2.5em;
+    &:after{
+        @include setBottomLine($x2uiCellBorderColor);
+        left: $x2uiCellGapH;
+    }
+    .x2ui-form-preview__value{
+        font-style: normal;
+        font-size: 1.6em;
+    }
+}
+.x2ui-form-preview__bd{
+    padding: $x2uiCellGapV $x2uiCellGapH;
+    font-size: .9em;
+    text-align: right;
+    color: $x2uiTextColorGray;
+    line-height: 2;
+}
+.x2ui-form-preview__ft{
+    position: relative;
+    line-height: 50px;
+    display: flex;
+    &:after {
+        @include setTopLine($x2uiDialogLineColor);
+    }
+}
+.x2ui-form-preview__item{
+    overflow: hidden;
+}
+.x2ui-form-preview__label{
+    float: left;
+    margin-right: 1em;
+    min-width: 4em;
+    color: $x2uiTextColorGray;
+    text-align: justify;
+    text-align-last: justify;
+}
+.x2ui-form-preview__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+}
+.x2ui-form-preview__btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: $x2uiDialogLinkColor;
+    text-align: center;
+    @include setTapColor();
+    button &{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        line-height: inherit;
+        font-size: inherit;
+    }
+    &:active {
+        background-color: $x2uiDialogLinkActiveBc;
+    }
+    &:after {
+        @include setLeftLine($x2uiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.x2ui-form-preview__btn_default {
+    color: $x2uiTextColorGray;
+}
+.x2ui-form-preview__btn_primary {
+    color: #0BB20C;
+}

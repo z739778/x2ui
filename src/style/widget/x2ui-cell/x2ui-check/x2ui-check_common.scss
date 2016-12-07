@@ -1,0 +1,13 @@
+@import "../../../base/fn";
+
+.x2ui-check__label {
+    @include setTapColor();
+    &:active {
+        background-color: #ECECEC;
+    }
+}
+
+.x2ui-check{
+    position: absolute;
+    left: -9999em;
+}

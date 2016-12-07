@@ -1,0 +1,24 @@
+@import "../../base/fn";
+
+.x2ui-progress {
+    display: flex;
+    align-items: center;
+}
+
+.x2ui-progress__bar {
+    background-color: $x2uiProgressBg;
+    height: $x2uiProgressHeight;
+    flex: 1;
+}
+
+.x2ui-progress__inner-bar {
+    width: 0;
+    height: 100%;
+    background-color: $x2uiProgressColor;
+}
+
+.x2ui-progress__opr {
+    display: block;
+    margin-left: 15px;
+    font-size: 0;
+}

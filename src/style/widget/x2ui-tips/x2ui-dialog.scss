@@ -1,0 +1,133 @@
+@import "../../base/fn";
+
+.x2ui-dialog {
+    position: fixed;
+    z-index: 5000;
+    width: 80%;
+    max-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: $x2uiDialogBackgroundColor;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.x2ui-dialog__hd {
+    padding: 1.3em $x2uiDialogGapWidth .5em;
+}
+.x2ui-dialog__title {
+    font-weight: 400;
+    font-size: 18px;
+}
+.x2ui-dialog__bd {
+    padding: 0 $x2uiDialogGapWidth .8em;
+    min-height: 40px;
+    font-size: 15px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: $x2uiTextColorGray;
+    &:first-child{
+        padding:2.7em 20px 1.7em;
+        color:#353535;
+    }
+}
+.x2ui-dialog__ft {
+    position: relative;
+    line-height: 48px;
+    font-size: 18px;
+    display: flex;
+    &:after {
+        content: " ";
+        @include setTopLine($x2uiDialogLineColor);
+    }
+}
+.x2ui-dialog__btn {
+    display: block;
+    flex: 1;
+    color: $x2uiDialogLinkColor;
+    text-decoration: none;
+    @include setTapColor();
+    &:active {
+        background-color: $x2uiDialogLinkActiveBc;
+    }
+
+    position: relative;
+    &:after {
+        content: " ";
+        @include setLeftLine($x2uiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.x2ui-dialog__btn_default {
+    color: #353535;
+}
+.x2ui-dialog__btn_primary {
+    color: #0BB20C;
+}
+
+.x2ui-skin_android{
+    .x2ui-dialog {
+        text-align: left;
+        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, .1);
+    }
+    .x2ui-dialog__title{
+        font-size: 21px;
+    }
+    .x2ui-dialog__hd{
+        text-align: left;
+    }
+    .x2ui-dialog__bd{
+        color:$x2uiTextColorGray;
+        padding:.25em $x2uiDialogGapWidth 2em;
+        font-size: 17px;
+        text-align: left;
+        &:first-child{
+            padding:1.6em $x2uiDialogGapWidth 2em;
+            color:#353535;
+        }
+    }
+    .x2ui-dialog__ft{
+        display: block;
+        text-align: right;
+        line-height: 42px;
+        font-size: 16px;
+        padding:0 $x2uiDialogGapWidth .7em;
+        &:after{
+            display: none;
+        }
+    }
+    .x2ui-dialog__btn{
+        display: inline-block;
+        vertical-align: top;
+        padding:0 .8em;
+        &:after{
+            display: none;
+        }
+
+        &:active{
+            background-color: rgba(0,0,0,.06);
+        }
+        &:visited{
+            background-color: rgba(0,0,0,.06);
+        }
+        &:last-child{
+            margin-right: -.8em;
+        }
+    }
+    .x2ui-dialog__btn_default {
+        color: #808080;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .x2ui-dialog {
+        width: 35%;
+    }
+}

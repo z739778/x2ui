@@ -1,0 +1,19 @@
+@import "../../base/fn";
+@import "x2ui-tabbar";
+@import "x2ui-navbar";
+
+.x2ui-tab {
+    position: relative;
+    height: 100%;
+}
+
+.x2ui-tab__panel {
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 50px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.x2ui-tab__content{
+    display: none;
+}

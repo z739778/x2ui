@@ -1,0 +1,16 @@
+@import "../../base/fn";
+
+.x2ui-btn_disabled {
+    color: $x2uiBtnDisabledFontColor;
+    &.x2ui-btn_default {
+        color: $x2uiBtnDefaultDisabledFontColor;
+        background-color: $x2uiBtnDefaultDisabledBg;
+    }
+    &.x2ui-btn_primary {
+        color:$x2uiBtnPrimaryDisabledFontColor;
+        background-color: $x2uiBtnPrimaryDisabledBg;
+    }
+    &.x2ui-btn_warn {
+        background-color: $x2uiBtnwarnDisabledBg;
+    }
+}

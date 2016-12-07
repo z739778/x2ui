@@ -1,0 +1,99 @@
+@import "../../base/fn";
+
+.x2ui-uploader{}
+.x2ui-uploader__hd{
+    display: flex;
+    padding-bottom: $x2uiCellGapV;
+    align-items: center;
+}
+.x2ui-uploader__title{
+    flex: 1;
+}
+.x2ui-uploader__info{
+    color: $x2uiTextColorTips;
+}
+
+.x2ui-uploader__bd{
+    margin-bottom: $x2uiCellGapH - ($x2uiCellGapV + $x2uiUploaderFileSpacing);
+    margin-right: -$x2uiUploaderFileSpacing;
+    overflow: hidden;
+}
+.x2ui-uploader__files{
+    list-style: none;
+}
+.x2ui-uploader__file{
+    float: left;
+    margin-right: $x2uiUploaderFileSpacing;
+    margin-bottom: $x2uiUploaderFileSpacing;
+    width: $x2uiUploaderSize;
+    height: $x2uiUploaderSize;
+    background: no-repeat center center;
+    background-size: cover;
+}
+.x2ui-uploader__file_status{
+    position: relative;
+    &:before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+    }
+    .x2ui-uploader__file-content{
+        display: block;
+    }
+}
+.x2ui-uploader__file-content{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    .x2ui-icon-warn{
+        display: inline-block;
+    }
+}
+.x2ui-uploader__input-box{
+    float:left;
+    position: relative;
+    margin-right: $x2uiUploaderFileSpacing;
+    margin-bottom: $x2uiUploaderFileSpacing;
+    width: $x2uiUploaderSize - $x2uiUploaderBorderWidth * 2;
+    height: $x2uiUploaderSize - $x2uiUploaderBorderWidth * 2;
+    border: $x2uiUploaderBorderWidth solid $x2uiUploaderBorderColor;
+    &:before, &:after{
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $x2uiUploaderBorderColor;
+    }
+    &:before{
+        width: $x2uiUploaderBorderWidth + 1;
+        height: $x2uiUploaderSize / 2;
+    }
+    &:after{
+        width: $x2uiUploaderSize / 2;
+        height: $x2uiUploaderBorderWidth + 1;
+    }
+    &:active{
+        border-color: $x2uiUploaderActiveBorderColor;
+        &:before, &:after{
+            background-color: $x2uiUploaderActiveBorderColor;
+        }
+    }
+}
+.x2ui-uploader__input{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    @include setTapColor();
+}

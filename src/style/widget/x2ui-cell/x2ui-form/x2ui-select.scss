@@ -1,0 +1,69 @@
+@import "../../../base/fn";
+
+.x2ui-cell_select {
+    padding: 0;
+    .x2ui-select {
+        padding-right: 30px;
+    }
+    .x2ui-cell__bd{
+        &:after{
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: $x2uiCellGapH;
+            margin-top: -4px;
+        }
+    }
+}
+
+.x2ui-select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: $x2uiCellHeight;
+    line-height: $x2uiCellHeight;
+    position: relative;
+    z-index: 1;
+    padding-left: $x2uiCellGapH;
+}
+
+.x2ui-cell_select-before {
+    padding-right:$x2uiCellGapH;
+    .x2ui-select{
+        width:$x2uiCellLabelWidth;
+        box-sizing: border-box;
+    }
+    .x2ui-cell__hd {
+        position:relative;
+        &:after {
+            @include setRightLine($x2uiCellBorderColor);
+        }
+        &:before{
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: $x2uiCellGapH;
+            margin-top: -4px;
+        }
+    }
+    .x2ui-cell__bd {
+        padding-left:$x2uiCellGapH;
+        &:after{
+            display:none;
+        }
+    }
+}
+
+.x2ui-cell_select-after {
+    padding-left:$x2uiCellGapH;
+    .x2ui-select {
+        padding-left:0;
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../base/fn";
+
+.x2ui-btn_default {
+    color: $x2uiBtnDefaultFontColor;
+    background-color: $x2uiBtnDefaultBg;
+    // &:not(.x2ui-btn_disabled):visited {
+    //     color: $x2uiBtnDefaultFontColor;
+    // }
+    // &:not(.x2ui-btn_disabled):active {
+    //     color: $x2uiBtnDefaultActiveFontColor;
+    //     background-color: $x2uiBtnDefaultActiveBg;
+    // }
+}

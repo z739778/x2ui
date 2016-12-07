@@ -1,0 +1,45 @@
+@import "../../base/fn";
+@import "../x2ui-button/x2ui-button";
+
+.x2ui-msg {
+    padding-top: $x2uiMsgPaddingTop;
+    text-align: center;
+}
+.x2ui-msg__icon-area {
+    margin-bottom: $x2uiMsgIconGap;
+}
+.x2ui-msg__text-area {
+    margin-bottom: $x2uiMsgTextGap;
+    padding:0 20px;
+}
+.x2ui-msg__text-area a{
+    color:$x2uiLinkColorDefault;
+}
+.x2ui-msg__title {
+    margin-bottom: $x2uiMsgTitleGap;
+    font-weight: 400;
+    font-size: 20px;
+}
+.x2ui-msg__desc {
+    font-size: 14px;
+    color: $x2uiTextColorGray;
+}
+.x2ui-msg__opr-area {
+    margin-bottom: $x2uiMsgOprGap;
+}
+.x2ui-msg__extra-area {
+    margin-bottom: $x2uiMsgExtraAreaGap;
+    font-size: 14px;
+    color: $x2uiTextColorGray;
+    a{color: $x2uiLinkColorDefault;}
+}
+
+@media screen and (min-height: $x2uiMsgExtraAreaOfMinHeight) {
+    .x2ui-msg__extra-area {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

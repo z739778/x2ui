@@ -1,0 +1,34 @@
+@import "../../base/fn";
+
+
+.x2ui-panel {
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    &:first-child {
+        margin-top: 0;
+    }
+
+    position: relative;
+    overflow: hidden;
+    &:before {
+        @include setTopLine($x2uiLineColorLight);
+    }
+    &:after {
+        @include setBottomLine($x2uiLineColorLight);
+    }
+}
+
+.x2ui-panel__hd {
+    padding: 14px 15px 10px;
+    color: $x2uiTextColorGray;
+    font-size: 13px;
+    position: relative;
+    &:after {
+        @include setBottomLine($x2uiLineColorLight);
+        left: 15px;
+    }
+}
+
+
+
+

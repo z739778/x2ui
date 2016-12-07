@@ -1,0 +1,75 @@
+@import "../../../base/fn";
+
+.x2ui-label{
+  display:block;
+  width:$x2uiCellLabelWidth;
+  @include text_wrap();
+}
+.x2ui-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: $x2uiCellLineHeight + em;
+    line-height: $x2uiCellLineHeight;
+
+    // hides the spin-button
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+.x2ui-textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    outline: 0;
+}
+
+.x2ui-textarea-counter{
+    color: $x2uiTextColorTips;
+    text-align: right;
+    .x2ui-cell_warn &{
+        color: $x2uiTextColorWarn;
+    }
+}
+
+.x2ui-toptips {
+    display:none;
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:5px;
+    font-size:14px;
+    text-align: center;
+    color: #FFF;
+    z-index: 5000;
+    @include text_wrap();
+}
+.x2ui-toptips_warn {
+    background-color: $x2uiColorWarn;
+}
+.x2ui-cells_form {
+    .x2ui-cell__ft{
+        font-size:0;
+    }
+    .x2ui-icon-warn{
+        display:none;
+    }
+    input, textarea, label[for]{
+        @include setTapColor();
+    }
+}
+.x2ui-cell_warn{
+    color:$x2uiTextColorWarn;
+    .x2ui-icon-warn{display:inline-block;}
+}

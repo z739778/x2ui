@@ -4,32 +4,32 @@
         <p class="page__desc">弹出式菜单</p>
     </div>
     <div class="page__bd page__bd_spacing">
-        <a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSActionSheet">iOS ActionSheet</a>
-        <a href="javascript:;" class="weui-btn weui-btn_default" id="showAndroidActionSheet">Android ActionSheet</a>
+        <a href="javascript:;" class="x2ui-btn x2ui-btn_default" id="showIOSActionSheet">iOS ActionSheet</a>
+        <a href="javascript:;" class="x2ui-btn x2ui-btn_default" id="showAndroidActionSheet">Android ActionSheet</a>
     </div>
     <!--BEGIN actionSheet-->
     <div>
-        <div class="weui-mask" id="iosMask" style="display: none"></div>
-        <div class="weui-actionsheet" id="iosActionsheet">
-            <div class="weui-actionsheet__menu">
-                <div class="weui-actionsheet__cell">示例菜单</div>
-                <div class="weui-actionsheet__cell">示例菜单</div>
-                <div class="weui-actionsheet__cell">示例菜单</div>
-                <div class="weui-actionsheet__cell">示例菜单</div>
+        <div class="x2ui-mask" id="iosMask" style="display: none"></div>
+        <div class="x2ui-actionsheet" id="iosActionsheet">
+            <div class="x2ui-actionsheet__menu">
+                <div class="x2ui-actionsheet__cell">示例菜单</div>
+                <div class="x2ui-actionsheet__cell">示例菜单</div>
+                <div class="x2ui-actionsheet__cell">示例菜单</div>
+                <div class="x2ui-actionsheet__cell">示例菜单</div>
             </div>
-            <div class="weui-actionsheet__action">
-                <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+            <div class="x2ui-actionsheet__action">
+                <div class="x2ui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
             </div>
         </div>
     </div>
 
-    <div class="weui-skin_android" id="androidActionsheet" style="display: none">
-        <div class="weui-mask"></div>
-        <div class="weui-actionsheet">
-            <div class="weui-actionsheet__menu">
-                <div class="weui-actionsheet__cell">示例菜单</div>
-                <div class="weui-actionsheet__cell">示例菜单</div>
-                <div class="weui-actionsheet__cell">示例菜单</div>
+    <div class="x2ui-skin_android" id="androidActionsheet" style="display: none">
+        <div class="x2ui-mask"></div>
+        <div class="x2ui-actionsheet">
+            <div class="x2ui-actionsheet__menu">
+                <div class="x2ui-actionsheet__cell">示例菜单</div>
+                <div class="x2ui-actionsheet__cell">示例菜单</div>
+                <div class="x2ui-actionsheet__cell">示例菜单</div>
             </div>
         </div>
     </div>
@@ -45,14 +45,14 @@
         var $iosMask = $('#iosMask');
 
         function hideActionSheet() {
-            $iosActionsheet.removeClass('weui-actionsheet_toggle');
+            $iosActionsheet.removeClass('x2ui-actionsheet_toggle');
             $iosMask.fadeOut(200);
         }
 
         $iosMask.on('click', hideActionSheet);
         $('#iosActionsheetCancel').on('click', hideActionSheet);
         $("#showIOSActionSheet").on("click", function(){
-            $iosActionsheet.addClass('weui-actionsheet_toggle');
+            $iosActionsheet.addClass('x2ui-actionsheet_toggle');
             $iosMask.fadeIn(200);
         });
     });
@@ -60,7 +60,7 @@
     // android
     $(function(){
         var $androidActionSheet = $('#androidActionsheet');
-        var $androidMask = $androidActionSheet.find('.weui-mask');
+        var $androidMask = $androidActionSheet.find('.x2ui-mask');
 
         $("#showAndroidActionSheet").on('click', function(){
             $androidActionSheet.fadeIn(200);

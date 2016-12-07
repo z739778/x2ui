@@ -1,0 +1,89 @@
+@import "x2ui-font";
+
+[class^="x2ui-icon_"]:before, [class*=" x2ui-icon_"]:before {
+    margin: 0;
+}
+.x2ui-icon-success {
+    font-size: 23px;
+    color: #09BB07;
+}
+.x2ui-icon-waiting {
+    font-size: 23px;
+    color: #10AEFF;
+}
+.x2ui-icon-warn {
+    font-size: 23px;
+    color: #F43530;
+}
+.x2ui-icon-info {
+    font-size: 23px;
+    color: #10AEFF;
+}
+
+.x2ui-icon-success-circle {
+    font-size: 23px;
+    color: #09BB07;
+}
+.x2ui-icon-success-no-circle {
+    font-size: 23px;
+    color: #09BB07;
+}
+.x2ui-icon-waiting-circle {
+    font-size: 23px;
+    color: #10AEFF;
+}
+.x2ui-icon-circle {
+    font-size: 23px;
+    color: #C9C9C9;
+}
+.x2ui-icon-download {
+    font-size: 23px;
+    color: #09BB07;
+}
+
+.x2ui-icon-info-circle {
+    font-size: 23px;
+    color: #09BB07;
+}
+
+.x2ui-icon-safe-success {
+    color: #09BB07;
+}
+.x2ui-icon-safe-warn {
+    color: #FFBE00;
+}
+
+.x2ui-icon-cancel {
+    color: #F43530;
+    font-size: 22px;
+}
+
+.x2ui-icon-search {
+    color: #B2B2B2;
+    font-size: 14px;
+}
+
+.x2ui-icon-clear {
+    color: #B2B2B2;
+    font-size: 14px;
+}
+
+.x2ui-icon-delete {
+    &.x2ui-icon_gallery-delete{
+        color:#FFFFFF;
+        font-size:22px;
+    }
+}
+
+.x2ui-icon_msg {
+    font-size: 93px;
+    &.x2ui-icon-warn {
+        color: #F76260;
+    }
+}
+.x2ui-icon_msg-primary {
+    font-size: 93px;
+    &.x2ui-icon-warn {
+        color: #C9C9C9;
+    }
+}

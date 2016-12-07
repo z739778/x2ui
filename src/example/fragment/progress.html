@@ -4,34 +4,34 @@
         <p class="page__desc">进度条</p>
     </div>
     <div class="page__bd page__bd_spacing">
-        <div class="weui-progress">
-            <div class="weui-progress__bar">
-                <div class="weui-progress__inner-bar js_progress" style="width: 0%;"></div>
+        <div class="x2ui-progress">
+            <div class="x2ui-progress__bar">
+                <div class="x2ui-progress__inner-bar js_progress" style="width: 0%;"></div>
             </div>
-            <a href="javascript:;" class="weui-progress__opr">
-                <i class="weui-icon-cancel"></i>
+            <a href="javascript:;" class="x2ui-progress__opr">
+                <i class="x2ui-icon-cancel"></i>
             </a>
         </div>
         <br>
-        <div class="weui-progress">
-            <div class="weui-progress__bar">
-                <div class="weui-progress__inner-bar js_progress" style="width: 50%;"></div>
+        <div class="x2ui-progress">
+            <div class="x2ui-progress__bar">
+                <div class="x2ui-progress__inner-bar js_progress" style="width: 50%;"></div>
             </div>
-            <a href="javascript:;" class="weui-progress__opr">
-                <i class="weui-icon-cancel"></i>
+            <a href="javascript:;" class="x2ui-progress__opr">
+                <i class="x2ui-icon-cancel"></i>
             </a>
         </div>
         <br>
-        <div class="weui-progress">
-            <div class="weui-progress__bar">
-                <div class="weui-progress__inner-bar js_progress" style="width: 80%;"></div>
+        <div class="x2ui-progress">
+            <div class="x2ui-progress__bar">
+                <div class="x2ui-progress__inner-bar js_progress" style="width: 80%;"></div>
             </div>
-            <a href="javascript:;" class="weui-progress__opr">
-                <i class="weui-icon-cancel"></i>
+            <a href="javascript:;" class="x2ui-progress__opr">
+                <i class="x2ui-icon-cancel"></i>
             </a>
         </div>
-        <div class="weui-btn-area">
-            <a href="javascript:;" class="weui-btn weui-btn_primary" id="btnUpload">上传</a>
+        <div class="x2ui-btn-area">
+            <a href="javascript:;" class="x2ui-btn x2ui-btn_primary" id="btnUpload">上传</a>
         </div>
     </div>
     <div class="page__ft">
@@ -47,7 +47,7 @@
         function next() {
             if(progress > 100){
                 progress = 0;
-                $btnUpload.removeClass('weui-btn_disabled');
+                $btnUpload.removeClass('x2ui-btn_disabled');
                 return;
             }
             $progress.css({width: progress + '%'});
@@ -56,9 +56,9 @@
         }
 
         $btnUpload.on('click', function(){
-            if ($btnUpload.hasClass('weui-btn_disabled')) return;
+            if ($btnUpload.hasClass('x2ui-btn_disabled')) return;
 
-            $btnUpload.addClass('weui-btn_disabled');
+            $btnUpload.addClass('x2ui-btn_disabled');
             next();
         });
     });

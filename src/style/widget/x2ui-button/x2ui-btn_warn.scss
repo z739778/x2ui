@@ -1,0 +1,12 @@
+@import "../../base/fn";
+
+.x2ui-btn_warn {
+    background-color: $x2uiBtnWarnBg;
+    // &:not(.x2ui-btn_disabled):visited {
+    //     color: $x2uiBtnFontColor;
+    // }
+    // &:not(.x2ui-btn_disabled):active {
+    //     color: $x2uiBtnActiveFontColor;
+    //     background-color: $x2uiBtnWarnActiveBg;
+    // }
+}

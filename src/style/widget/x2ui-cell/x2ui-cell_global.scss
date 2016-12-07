@@ -1,0 +1,67 @@
+@import "../../base/fn";
+
+.x2ui-cells {
+    margin-top: $x2uiCellsMarginTop;
+    background-color: $x2uiCellBg;
+    line-height: $x2uiCellLineHeight;
+    font-size: $x2uiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+
+    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+
+    // onepx
+    position: relative;
+    &:before {
+        @include setTopLine($x2uiCellBorderColor);
+    }
+    &:after {
+        @include setBottomLine($x2uiCellBorderColor);
+    }
+}
+
+.x2ui-cells__title {
+    margin-top: .77em; // 15px - 行高
+    margin-bottom: .3em; // 8px - 行高
+    padding-left: $x2uiCellGapH;
+    padding-right: $x2uiCellGapH;
+    color: $x2uiTextColorGray;
+    font-size: $x2uiCellTipsFontSize;
+
+    & + .x2ui-cells {
+        margin-top: 0;
+    }
+}
+
+.x2ui-cells__tips {
+    margin-top: .3em; // 8px - 行高
+    color: $x2uiTextColorGray;
+    padding-left: $x2uiCellGapH;
+    padding-right: $x2uiCellGapH;
+    font-size: $x2uiCellTipsFontSize;
+}
+
+.x2ui-cell {
+    padding: $x2uiCellGapV $x2uiCellGapH;
+    position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+    display: flex;
+    align-items: center;
+    &:before {
+        @include setTopLine($x2uiCellBorderColor);
+        left: $x2uiCellGapH;
+        right: $x2uiCellGapH;
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+.x2ui-cell_primary{
+    align-items: flex-start;
+}
+.x2ui-cell__bd{
+    flex: 1;
+}
+.x2ui-cell__ft {
+    text-align: right;
+    color: $x2uiTextColorGray;
+}

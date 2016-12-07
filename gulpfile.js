@@ -34,12 +34,12 @@ var dist = __dirname + '/dist';
 gulp.task('build:style', function (){
     var banner = [
         '/*!',
-        ' * WeUI v<%= pkg.version %> (<%= pkg.homepage %>)',
+        ' * x2ui v<%= pkg.version %> (<%= pkg.homepage %>)',
         ' * Copyright <%= new Date().getFullYear() %> Tencent, Inc.',
         ' * Licensed under the <%= pkg.license %> license',
         ' */',
         ''].join('\n');
-    gulp.src('src/style/weui.scss', option)
+    gulp.src('src/style/x2ui.scss', option)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', function (e) {
             console.error(e.message);

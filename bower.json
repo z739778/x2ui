@@ -1,11 +1,11 @@
 {
-    "name": "weui",
+    "name": "x2ui",
     "repository": {
         "type": "git",
-        "url": "https://github.com/weui/weui.git"
+        "url": "https://github.com/x2ui/x2ui.git"
     },
     "description": "wechat mobile ui",
-    "main": "dist/style/weui.css",
+    "main": "dist/style/x2ui.css",
     "version": "1.1.0",
     "authors": [
         "wechat ui team"
@@ -17,6 +17,6 @@
         "mobile",
         "ui"
     ],
-    "homepage": "https://github.com/weui/weui",
+    "homepage": "https://github.com/x2ui/x2ui",
     "ignore": []
 }
