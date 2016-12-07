@@ -6,11 +6,11 @@
     font-size :13px;
 
     a{
-        color: @weuiLinkColorDefault;
+        color: $weuiLinkColorDefault;
     }
 }
 .weui-agree__text{
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
 }
 .weui-agree__checkbox{
     appearance: none;

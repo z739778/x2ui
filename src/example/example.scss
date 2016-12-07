@@ -94,7 +94,7 @@ body, .page {
 /*  widget */
 
 .page.home{
-    @pageHomePadding: 20px;
+    $pageHomePadding: 20px;
     .page__intro-icon{
         margin-top: -.2em;
         margin-left: 5px;
@@ -144,7 +144,7 @@ body, .page {
         transition: .3s;
     }
     .weui-flex{
-        padding: @pageHomePadding;
+        padding: $pageHomePadding;
         align-items: center;
         transition: .3s;
         //&:active{
@@ -158,11 +158,11 @@ body, .page {
         }
     }
     .weui-cell{
-        padding-left: @pageHomePadding;
-        padding-right: @pageHomePadding;
+        padding-left: $pageHomePadding;
+        padding-right: $pageHomePadding;
         &:before{
-            left: @pageHomePadding;
-            right: @pageHomePadding;
+            left: $pageHomePadding;
+            right: $pageHomePadding;
         }
     }
 }
@@ -272,11 +272,11 @@ body, .page {
 }
 
 .page.layers{
-    @layerBaseTransform: translateX(15px) rotateX(45deg) rotateZ(10deg) skew(-15deg);
-    @layerStartPos: 120px;
-    @layerSpacing: 80px;
-    @layerSmallStartPos: 140px;
-    @layerSmallSpacing: 60px;
+    $layerBaseTransform: translateX(15px) rotateX(45deg) rotateZ(10deg) skew(-15deg);
+    $layerStartPos: 120px;
+    $layerSpacing: 80px;
+    $layerSmallStartPos: 140px;
+    $layerSmallSpacing: 60px;
 
     overflow-x: hidden;
     perspective: 1000px;
@@ -340,9 +340,9 @@ body, .page {
         border: 1px solid rgba(203, 203, 203, .5);
         z-index: 4;
         &.j_transform{
-            transform: @layerBaseTransform translateZ(@layerStartPos);
+            transform: $layerBaseTransform translateZ($layerStartPos);
             @media only screen and (max-width: 320px) {
-                transform: @layerBaseTransform translateZ(@layerSmallStartPos);
+                transform: $layerBaseTransform translateZ($layerSmallStartPos);
             }
         }
         &.j_pic{
@@ -354,9 +354,9 @@ body, .page {
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 3;
         &.j_transform{
-            transform: @layerBaseTransform translateZ(@layerStartPos - @layerSpacing);
+            transform: $layerBaseTransform translateZ($layerStartPos - $layerSpacing);
             @media only screen and (max-width: 320px) {
-                transform: @layerBaseTransform translateZ(@layerSmallStartPos - @layerSmallSpacing);
+                transform: $layerBaseTransform translateZ($layerSmallStartPos - $layerSmallSpacing);
             }
         }
     }
@@ -364,9 +364,9 @@ body, .page {
         background-color: rgba(40, 187, 102, 0.5);
         z-index: 2;
         &.j_transform{
-            transform: @layerBaseTransform translateZ(@layerStartPos - 2 * @layerSpacing);
+            transform: $layerBaseTransform translateZ($layerStartPos - 2 * $layerSpacing);
             @media only screen and (max-width: 320px) {
-                transform: @layerBaseTransform translateZ(@layerSmallStartPos - 2 * @layerSmallSpacing);
+                transform: $layerBaseTransform translateZ($layerSmallStartPos - 2 * $layerSmallSpacing);
             }
         }
         &.j_pic{
@@ -378,9 +378,9 @@ body, .page {
         background-color: #FFFFFF;
         z-index: 1;
         &.j_transform{
-            transform: @layerBaseTransform translateZ(@layerStartPos - 3 * @layerSpacing);
+            transform: $layerBaseTransform translateZ($layerStartPos - 3 * $layerSpacing);
             @media only screen and (max-width: 320px) {
-                transform: @layerBaseTransform translateZ(@layerSmallStartPos - 3 * @layerSmallSpacing);
+                transform: $layerBaseTransform translateZ($layerSmallStartPos - 3 * $layerSmallSpacing);
             }
         }
         &.j_pic{

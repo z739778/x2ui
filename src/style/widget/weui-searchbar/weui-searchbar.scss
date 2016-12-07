@@ -6,10 +6,10 @@
     box-sizing: border-box;
     background-color: #EFEFF4;
     &:before {
-        .setTopLine(#D7D6DC);
+        @include setTopLine(#D7D6DC);
     }
     &:after {
-        .setBottomLine(#D7D6DC);
+        @include setBottomLine(#D7D6DC);
     }
     &.weui-search-bar_focusing{
         .weui-search-bar__cancel-btn{

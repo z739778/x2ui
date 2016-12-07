@@ -1,6 +1,6 @@
 @import "../../base/fn";
 
-@weuiGalleryOprHeight: 60px;
+$weuiGalleryOprHeight: 60px;
 .weui-gallery {
     display: none;
     position: fixed;
@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    bottom: @weuiGalleryOprHeight;
+    bottom: $weuiGalleryOprHeight;
     left: 0;
     background: center center no-repeat;
     background-size: contain;
@@ -27,7 +27,7 @@
     left: 0;
     background-color: #0D0D0D;
     color: #FFFFFF;
-    line-height: @weuiGalleryOprHeight;
+    line-height: $weuiGalleryOprHeight;
     text-align: center;
 }
 .weui-gallery__del {

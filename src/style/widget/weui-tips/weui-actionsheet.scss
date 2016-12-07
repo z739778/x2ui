@@ -1,5 +1,5 @@
 @import "../../base/fn";
-@weuiActionSheetAndroidBorderRadius: 2px;
+$weuiActionSheetAndroidBorderRadius: 2px;
 
 .weui-actionsheet {
     position: fixed;
@@ -9,7 +9,7 @@
     backface-visibility: hidden;
     z-index: 5000;
     width: 100%;
-    background-color: @weuiBgColorDefault;
+    background-color: $weuiBgColorDefault;
     //slide up animation
     transition: transform .3s;
 }
@@ -26,10 +26,10 @@
     text-align: center;
     font-size: 18px;
     &:before {
-        .setTopLine(@weuiCellBorderColor);
+        @include setTopLine($weuiCellBorderColor);
     }
     &:active{
-        background-color: @weuiBgColorActive;
+        background-color: $weuiBgColorActive;
     }
     &:first-child{
         &:before{
@@ -59,7 +59,7 @@
         display: none;
     }
     .weui-actionsheet__menu {
-        border-radius: @weuiActionSheetAndroidBorderRadius;
+        border-radius: $weuiActionSheetAndroidBorderRadius;
         box-shadow: 0 6px 30px 0 rgba(0,0,0,.1);
     }
     .weui-actionsheet__cell {
@@ -68,12 +68,12 @@
         line-height: 1.4;
         text-align: left;
         &:first-child {
-            border-top-left-radius: @weuiActionSheetAndroidBorderRadius;
-            border-top-right-radius: @weuiActionSheetAndroidBorderRadius;
+            border-top-left-radius: $weuiActionSheetAndroidBorderRadius;
+            border-top-right-radius: $weuiActionSheetAndroidBorderRadius;
         }
         &:last-child {
-            border-bottom-left-radius: @weuiActionSheetAndroidBorderRadius;
-            border-bottom-right-radius: @weuiActionSheetAndroidBorderRadius;
+            border-bottom-left-radius: $weuiActionSheetAndroidBorderRadius;
+            border-bottom-right-radius: $weuiActionSheetAndroidBorderRadius;
         }
     }
 }

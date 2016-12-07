@@ -9,7 +9,7 @@
     background-color: #F7F7FA;
 
     &:before {
-        .setTopLine(#C0BFC4);
+        @include setTopLine(#C0BFC4);
     }
 }
 
@@ -18,9 +18,9 @@
     flex: 1;
     padding: 5px 0 0;
     font-size: 0;
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
     text-align: center;
-    .setTapColor();
+    @include setTapColor();
 
     &.weui-bar__item_on {
         .weui-tabbar__icon,
@@ -36,10 +36,10 @@
     width: 27px;
     height: 27px;
 
-    i&,
+    &i,
     > i {
         font-size: 24px;
-        color: @weuiTextColorGray;
+        color: $weuiTextColorGray;
     }
 
     img {
@@ -50,7 +50,7 @@
 
 .weui-tabbar__label {
     text-align: center;
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
     font-size: 10px;
     line-height: 1.8;
 }

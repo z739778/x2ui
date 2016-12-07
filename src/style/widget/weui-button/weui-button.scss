@@ -28,29 +28,29 @@ button, input {
 .weui-btn_mini {
     display: inline-block;
     padding: 0 1.32em;
-    line-height: @weuiBtnMiniHeight;
-    font-size: @weuiBtnMiniFontSize;
+    line-height: $weuiBtnMiniHeight;
+    font-size: $weuiBtnMiniFontSize;
 }
 
 
 /*gap between btn*/
 .weui-btn + .weui-btn {
-    margin-top: @weuiBtnDefaultGap;
+    margin-top: $weuiBtnDefaultGap;
 }
 
 .weui-btn.weui-btn_inline + .weui-btn.weui-btn_inline {
     margin-top: auto;
-    margin-left: @weuiBtnDefaultGap;
+    margin-left: $weuiBtnDefaultGap;
 }
 
 .weui-btn-area {
-    margin: @weuiCellsMarginTop @weuiBtnDefaultGap .3em; 
+    margin: $weuiCellsMarginTop $weuiBtnDefaultGap .3em; 
 }
 .weui-btn-area_inline {
     display: flex;
     .weui-btn {
         margin-top: auto;
-        margin-right: @weuiBtnDefaultGap;
+        margin-right: $weuiBtnDefaultGap;
         width: 100%;
         flex: 1;
         &:last-child {

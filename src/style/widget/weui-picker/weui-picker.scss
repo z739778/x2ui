@@ -19,14 +19,14 @@
     position: relative;
     text-align: center;
     &:after {
-        .setBottomLine(@weuiLineColorLight);
+        @include setBottomLine($weuiLineColorLight);
     }
 }
 
 .weui-picker__action {
     display: block;
     flex: 1;
-    color: @weuiLinkColorDefault;
+    color: $weuiLinkColorDefault;
 
     &:first-child {
         text-align: left;
@@ -74,10 +74,10 @@
     top: 102px;
     z-index: 3;
     &:before {
-        .setTopLine(@weuiLineColorLight);
+        @include setTopLine($weuiLineColorLight);
     }
     &:after {
-        .setBottomLine(@weuiLineColorLight);
+        @include setBottomLine($weuiLineColorLight);
     }
 }
 
@@ -98,5 +98,5 @@
 }
 
 .weui-picker__item_disabled {
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
 }

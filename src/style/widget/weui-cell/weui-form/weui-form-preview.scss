@@ -4,20 +4,20 @@
     position: relative;
     background-color: #FFFFFF;
     &:before{
-        .setTopLine(@weuiCellBorderColor);
+        @include setTopLine($weuiCellBorderColor);
     }
     &:after{
-        .setBottomLine(@weuiCellBorderColor);
+        @include setBottomLine($weuiCellBorderColor);
     }
 }
 .weui-form-preview__hd{
     position: relative;
-    padding: @weuiCellGapV @weuiCellGapH;
+    padding: $weuiCellGapV $weuiCellGapH;
     text-align: right;
     line-height: 2.5em;
     &:after{
-        .setBottomLine(@weuiCellBorderColor);
-        left: @weuiCellGapH;
+        @include setBottomLine($weuiCellBorderColor);
+        left: $weuiCellGapH;
     }
     .weui-form-preview__value{
         font-style: normal;
@@ -25,10 +25,10 @@
     }
 }
 .weui-form-preview__bd{
-    padding: @weuiCellGapV @weuiCellGapH;
+    padding: $weuiCellGapV $weuiCellGapH;
     font-size: .9em;
     text-align: right;
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
     line-height: 2;
 }
 .weui-form-preview__ft{
@@ -36,7 +36,7 @@
     line-height: 50px;
     display: flex;
     &:after {
-        .setTopLine(@weuiDialogLineColor);
+        @include setTopLine($weuiDialogLineColor);
     }
 }
 .weui-form-preview__item{
@@ -46,7 +46,7 @@
     float: left;
     margin-right: 1em;
     min-width: 4em;
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
     text-align: justify;
     text-align-last: justify;
 }
@@ -60,10 +60,10 @@
     position: relative;
     display: block;
     flex: 1;
-    color: @weuiDialogLinkColor;
+    color: $weuiDialogLinkColor;
     text-align: center;
-    .setTapColor();
-    button&{
+    @include setTapColor();
+    button &{
         background-color: transparent;
         border: 0;
         outline: 0;
@@ -71,10 +71,10 @@
         font-size: inherit;
     }
     &:active {
-        background-color: @weuiDialogLinkActiveBc;
+        background-color: $weuiDialogLinkActiveBc;
     }
     &:after {
-        .setLeftLine(@weuiDialogLineColor);
+        @include setLeftLine($weuiDialogLineColor);
     }
     &:first-child {
         &:after {
@@ -83,7 +83,7 @@
     }
 }
 .weui-form-preview__btn_default {
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
 }
 .weui-form-preview__btn_primary {
     color: #0BB20C;

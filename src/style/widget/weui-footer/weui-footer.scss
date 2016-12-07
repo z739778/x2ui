@@ -1,11 +1,11 @@
 @import "../../base/fn";
 
 .weui-footer {
-    color: @weuiTextColorGray;
+    color: $weuiTextColorGray;
     font-size: 14px;
     text-align: center;
     a{
-        color: @weuiLinkColorDefault;
+        color: $weuiLinkColorDefault;
     }
 }
 .weui-footer_fixed-bottom{
@@ -24,7 +24,7 @@
     position: relative;
     font-size: 14px;
     &:before{
-        .setLeftLine();
+        @include setLeftLine();
         left: -.65em;
         top: .36em;
         bottom: .36em;

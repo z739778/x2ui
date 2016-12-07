@@ -2,8 +2,8 @@
 
 .weui-label{
   display:block;
-  width:@weuiCellLabelWidth;
-  .text_wrap();
+  width:$weuiCellLabelWidth;
+  @include text_wrap();
 }
 .weui-input {
     width: 100%;
@@ -13,8 +13,8 @@
     background-color: transparent;
     font-size: inherit;
     color: inherit;
-    height: unit(@weuiCellLineHeight, em);
-    line-height: @weuiCellLineHeight;
+    height: $weuiCellLineHeight + em;
+    line-height: $weuiCellLineHeight;
 
     // hides the spin-button
     &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
@@ -34,10 +34,10 @@
 }
 
 .weui-textarea-counter{
-    color: @weuiTextColorTips;
+    color: $weuiTextColorTips;
     text-align: right;
     .weui-cell_warn &{
-        color: @weuiTextColorWarn;
+        color: $weuiTextColorWarn;
     }
 }
 
@@ -53,10 +53,10 @@
     text-align: center;
     color: #FFF;
     z-index: 5000;
-    .text_wrap();
+    @include text_wrap();
 }
 .weui-toptips_warn {
-    background-color: @weuiColorWarn;
+    background-color: $weuiColorWarn;
 }
 .weui-cells_form {
     .weui-cell__ft{
@@ -66,10 +66,10 @@
         display:none;
     }
     input, textarea, label[for]{
-        .setTapColor();
+        @include setTapColor();
     }
 }
 .weui-cell_warn{
-    color:@weuiTextColorWarn;
+    color:$weuiTextColorWarn;
     .weui-icon-warn{display:inline-block;}
 }
