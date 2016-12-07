@@ -8,8 +8,8 @@ $weuiCellFontSize:17px;
 $weuiCellTipsFontSize:14px;
 $weuiCellLabelWidth:105px;
 
-$weuiCellLineHeight: (($weuiCellHeight - 2 * $weuiCellGapV) / $weuiCellFontSize)/px; // 高度为44px，减去上下padding的行高
-$weuiCellsMarginTop:(20 / $weuiCellFontSize)/px + em;
+$weuiCellLineHeight: ($weuiCellHeight - 2 * $weuiCellGapV) / $weuiCellFontSize; // 高度为44px，减去上下padding的行高
+$weuiCellsMarginTop:20 / ($weuiCellFontSize/($weuiCellFontSize*0 + 1)) + em;
 
 // weui switch
 $weuiSwitchHeight: 32px;
