@@ -2,7 +2,7 @@
 var path = require('path');
 var fs = require('fs');
 var gulp = require('gulp');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var header = require('gulp-header');
 var tap = require('gulp-tap');
 var nano = require('gulp-cssnano');
@@ -39,9 +39,9 @@ gulp.task('build:style', function (){
         ' * Licensed under the <%= pkg.license %> license',
         ' */',
         ''].join('\n');
-    gulp.src('src/style/weui.less', option)
+    gulp.src('src/style/weui.scss', option)
         .pipe(sourcemaps.init())
-        .pipe(less().on('error', function (e) {
+        .pipe(sass().on('error', function (e) {
             console.error(e.message);
             this.emit('end');
         }))
@@ -67,8 +67,8 @@ gulp.task('build:example:assets', function (){
 });
 
 gulp.task('build:example:style', function (){
-    gulp.src('src/example/example.less', option)
-        .pipe(less().on('error', function (e){
+    gulp.src('src/example/example.scss', option)
+        .pipe(sass().on('error', function (e){
             console.error(e.message);
             this.emit('end');
         }))
@@ -104,7 +104,7 @@ gulp.task('release', ['build:style', 'build:example']);
 
 gulp.task('watch', ['release'], function () {
     gulp.watch('src/style/**/*', ['build:style']);
-    gulp.watch('src/example/example.less', ['build:example:style']);
+    gulp.watch('src/example/example.scss', ['build:example:style']);
     gulp.watch('src/example/**/*.?(png|jpg|gif|js)', ['build:example:assets']);
     gulp.watch('src/**/*.html', ['build:example:html']);
 });
