@@ -7,11 +7,11 @@
     "wechat",
     "weixin",
     "css",
-    "less",
+    "scss",
     "mobile"
   ],
   "style": "dist/style/x2ui.css",
-  "less": "src/style/x2ui.less",
+  "scss": "src/style/x2ui.scss",
   "main": "dist/style/x2ui.css",
   "scripts": {
     "start": "gulp -ws",
