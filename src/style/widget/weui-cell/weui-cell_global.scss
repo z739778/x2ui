@@ -47,6 +47,7 @@
     &:before {
         @include setTopLine($weuiCellBorderColor);
         left: $weuiCellGapH;
+        right: $weuiCellGapH;
     }
     &:first-child {
         &:before {
