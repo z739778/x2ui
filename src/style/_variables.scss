@@ -99,10 +99,10 @@ $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 $brand-primary:             #FDD602 !default;
-$brand-success:             #5cb85c !default;
-$brand-info:                #5bc0de !default;
-$brand-warning:             #f0ad4e !default;
-$brand-danger:              #d9534f !default;
+$brand-success:             #7dc535 !default;
+$brand-info:                #31b4f5 !default;
+$brand-warning:             #f3b90f !default;
+$brand-danger:              #ff4b4b !default;
 $brand-inverse:             $gray-dark !default;
 $brand-disable:             #dcdcdc !default;
 
@@ -348,7 +348,7 @@ $btn-primary-color:              rgba(156,94,8,1) !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-$btn-secondary-color:            $gray-dark !default;
+$btn-secondary-color:            #808080 !default;
 $btn-secondary-bg:               #fff !default;
 $btn-secondary-border:           #ccc !default;
 
@@ -364,9 +364,9 @@ $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
 $btn-success-border:             $btn-success-bg !default;
 
-$btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             $btn-warning-bg !default;
+$btn-warning-color:              $brand-warning !default;
+$btn-warning-bg:                 #fff !default;
+$btn-warning-border:             $brand-warning !default;
 
 $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
