@@ -101,7 +101,7 @@ $gray-lightest:             #f7f7f9 !default;
 $brand-primary:             #FDD602 !default;
 $brand-success:             #7dc535 !default;
 $brand-info:                #31b4f5 !default;
-$brand-warning:             #f3b90f !default;
+$brand-warning:             #f5e377 !default;
 $brand-danger:              #ff4b4b !default;
 $brand-inverse:             $gray-dark !default;
 $brand-disable:             #dcdcdc !default;
@@ -344,28 +344,25 @@ $btn-font-weight:                $font-weight-normal !default;
 $btn-box-shadow:                 inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075) !default;
 $btn-active-box-shadow:          inset 0 3px 5px rgba(0,0,0,.125) !default;
 
-$btn-primary-color:              rgba(156,94,8,1) !default;
+$btn-primary-color:              #9c5e08 !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-$btn-secondary-color:            #808080 !default;
-$btn-secondary-bg:               #fff !default;
-$btn-secondary-border:           #ccc !default;
+$btn-secondary-color:            #9b9b9b !default;
+$btn-secondary-bg:               #dcdcdc !default;
+$btn-secondary-border:           #dcdcdc !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                $btn-info-bg !default;
 
-$btn-disable-color:                 #9b9b9b !default;
-$btn-disable-bg:                    $brand-disable !default;
-$btn-disable-border:                $btn-disable-bg !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
 $btn-success-border:             $btn-success-bg !default;
 
-$btn-warning-color:              $brand-warning !default;
-$btn-warning-bg:                 #fff !default;
+$btn-warning-color:              #cba84c!default;
+$btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             $brand-warning !default;
 
 $btn-danger-color:               #fff !default;

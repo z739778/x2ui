@@ -143,9 +143,6 @@
 .card-outline-info {
   @include card-outline-variant($btn-info-bg);
 }
-.card-outline-info {
-  @include card-outline-variant($btn-disable-bg);
-}
 .card-outline-success {
   @include card-outline-variant($btn-success-bg);
 }

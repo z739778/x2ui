@@ -31,22 +31,19 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-  &.disabled,
-  &:disabled {
-    cursor: $cursor-disabled;
-    background-color: #f5e377;
-    color:#cba84c;
-    border-color: #f5e377;
-  }
+  // &.disabled,
+  // &:disabled {
+  //   cursor: $cursor-disabled;
+  //   background-color: #f5e377;
+  //   color:#cba84c;
+  //   border-color: #f5e377;
+  // }
 }
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 .btn-info {
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
-}
-.btn-disable {
-  @include button-variant($btn-disable-color, $btn-disable-bg, $btn-disable-border);
 }
 .btn-success {
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
@@ -68,9 +65,6 @@ fieldset[disabled] a.btn {
 .btn-outline-info {
   @include button-outline-variant($btn-info-bg);
 }
-.btn-outline-info {
-  @include button-outline-variant($btn-disable-bg);
-}
 .btn-outline-success {
   @include button-outline-variant($btn-success-bg);
 }
@@ -79,25 +73,6 @@ fieldset[disabled] a.btn {
 }
 .btn-outline-danger {
   @include button-outline-variant($btn-danger-bg);
-}
-
-
-//
-// Link buttons
-//
-
-// Make a button look and behave like a link
-.btn-link {
-  font-weight: $font-weight-normal;
-  color: $link-color;
-  border-radius: 0;
-
-  &:disabled {
-    @include hover-focus {
-      color: $btn-link-disabled-color;
-      text-decoration: none;
-    }
-  }
 }
 
 
