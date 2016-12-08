@@ -3,10 +3,6 @@
 // icon font
 @import "./icon/x2ui-icon_font";
 
-
-// button
-// @import "./widget/x2ui-button/x2ui-button";
-
 // cell
 @import "./widget/x2ui-cell/x2ui-cell_global";
 
@@ -17,6 +13,7 @@
 
 // msg
 @import "./widget/x2ui-page/x2ui-msg";
+@import "./widget/x2ui-tips/x2ui-badge";
 
 // article
 @import "./widget/x2ui-page/x2ui-article";
@@ -24,50 +21,17 @@
 // tab
 @import "./widget/x2ui-tab/x2ui-tab";
 
-// progress
-// @import "./widget/x2ui-progress/x2ui-progress";
-
 // panel
 @import "./widget/x2ui-panel/x2ui-panel";
 
 // media box
 @import "./widget/x2ui-media-box/x2ui-media-box";
 
-// grid
-@import "./widget/x2ui-grid/x2ui-grid";
-
 // copyright
 @import "./widget/x2ui-footer/x2ui-footer";
 
-
 // flex
 @import "./widget/x2ui-flex/x2ui-flex";
-
-// tips
-@import "./widget/x2ui-tips/x2ui-dialog";
-@import "./widget/x2ui-tips/x2ui-toast";
-@import "./widget/x2ui-tips/x2ui-mask";
-@import "./widget/x2ui-tips/x2ui-actionsheet";
-@import "./widget/x2ui-tips/x2ui-loadmore";
-@import "./widget/x2ui-tips/x2ui-badge";
-
-//searchbar
-// @import "./widget/x2ui-searchbar/x2ui-searchbar";
-
-// picker
-@import "./widget/x2ui-picker/x2ui-picker";
-
-// animate
-@import "./widget/x2ui-animate/x2ui-animate";
-
-// agree
-@import "./widget/x2ui-agree/x2ui-agree";
-
-// loading
-@import "./widget/x2ui-loading/x2ui-loading";
-
-// slider
-@import "./widget/x2ui-slider/x2ui-slider";
 
 /*!
  * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
@@ -103,11 +67,7 @@
 // @import "custom-forms";
 // @import "nav";
 // @import "navbar";
-// @import "card";
-// @import "breadcrumb";
-// @import "pagination";
 // @import "badge";
-// @import "jumbotron";
 // @import "alert";
 // @import "progress";
 // @import "media";
