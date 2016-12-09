@@ -14,11 +14,11 @@
 
 }
 
-@mixin button-outline-variant($color, $color-hover: #fff) {
+@mixin button-outline-variant($color, $border-color: $color) {
   color: $color;
   background-image: none;
   background-color: transparent;
-  border-color: $color;
+  border-color: $border-color;
 }
 
 // Button sizes
