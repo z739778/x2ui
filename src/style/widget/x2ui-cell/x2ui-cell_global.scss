@@ -1,6 +1,6 @@
 @import "../../base/fn";
 
-.x2ui-cells {
+.cell-container {
     margin-top: $x2uiCellsMarginTop;
     background-color: $x2uiCellBg;
     line-height: $x2uiCellLineHeight;
@@ -26,7 +26,7 @@
     color: $x2uiTextColorGray;
     font-size: $x2uiCellTipsFontSize;
 
-    & + .x2ui-cells {
+    & + .cell-container {
         margin-top: 0;
     }
 }
@@ -39,7 +39,7 @@
     font-size: $x2uiCellTipsFontSize;
 }
 
-.x2ui-cell {
+.cell-item {
     padding: $x2uiCellGapV $x2uiCellGapH;
     position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
     display: flex;

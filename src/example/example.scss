@@ -151,13 +151,13 @@ body, .page {
         //    background-color: #ECECEC;
         //}
     }
-    .x2ui-cells{
+    .cell-container{
         margin-top: 0;
         &:before, &:after{
             display: none;
         }
     }
-    .x2ui-cell{
+    .cell-item{
         padding-left: $pageHomePadding;
         padding-right: $pageHomePadding;
         &:before{

@@ -1,4 +1,4 @@
-.x2ui-cells {
+.cell-container {
     margin-top: $x2uiCellsMarginTop;
     background-color: $x2uiCellBg;
     line-height: $x2uiCellLineHeight;
@@ -24,7 +24,7 @@
     color: $x2uiTextColorGray;
     font-size: $x2uiCellTipsFontSize;
 
-    & + .x2ui-cells {
+    & + .cell-container {
         margin-top: 0;
     }
 }
@@ -37,7 +37,7 @@
     font-size: $x2uiCellTipsFontSize;
 }
 
-.x2ui-cell {
+.cell-item {
     padding: $x2uiCellGapV $x2uiCellGapH;
     position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
     display: flex;
@@ -86,7 +86,7 @@
     color: $x2uiLinkColorDefault;
     font-size: 14px;
 
-    // 由于x2ui-cell:first-child的:before为隐藏，所以这里要重新显示出来
+    // 由于cell-item:first-child的:before为隐藏，所以这里要重新显示出来
     &:first-child{
         &:before{
             display: block;
@@ -126,8 +126,8 @@
     }
 }
 
-.x2ui-cells_checkbox {
-    .x2ui-cell__hd {
+.cell-container_checkbox {
+    .cell-item__hd {
         padding-right: $x2uiCellInnerGapH;
     }
     .x2ui-icon-checked {
@@ -143,7 +143,7 @@
 // method2 accessbility
 .x2ui-check {
     // checkbox
-    .x2ui-cells_checkbox & {
+    .cell-container_checkbox & {
         &:checked {
             & + .x2ui-icon-checked {
                 &:before {
@@ -279,7 +279,7 @@
 .x2ui-textarea-counter{
     color: $x2uiTextColorTips;
     text-align: right;
-    .x2ui-cell_warn &{
+    .cell-item_warn &{
         color: $x2uiTextColorWarn;
     }
 }
@@ -301,7 +301,7 @@
 .x2ui-toptips_warn {
     background-color: $x2uiColorWarn;
 }
-.x2ui-cells_form {
+.cell-container_form {
     .cell-foot{
         font-size:0;
     }
@@ -312,11 +312,11 @@
         @include setTapColor();
     }
 }
-.x2ui-cell_warn{
+.cell-item_warn{
     color:$x2uiTextColorWarn;
     .x2ui-icon-warn{display:inline-block;}
 }
-.x2ui-cell_select {
+.cell-item_select {
     padding: 0;
     .x2ui-select {
         padding-right: 30px;
@@ -348,13 +348,13 @@
     padding-left: $x2uiCellGapH;
 }
 
-.x2ui-cell_select-before {
+.cell-item_select-before {
     padding-right:$x2uiCellGapH;
     .x2ui-select{
         width:$x2uiCellLabelWidth;
         box-sizing: border-box;
     }
-    .x2ui-cell__hd {
+    .cell-item__hd {
         position:relative;
         &:after {
             @include setRightLine($x2uiCellBorderColor);
@@ -377,14 +377,14 @@
     }
 }
 
-.x2ui-cell_select-after {
+.cell-item_select-after {
     padding-left:$x2uiCellGapH;
     .x2ui-select {
         padding-left:0;
     }
 }
 
-.x2ui-cell_vcode {
+.cell-item_vcode {
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -417,7 +417,7 @@
     }
 }
 
-.x2ui-cell_switch{
+.cell-item_switch{
     padding-top: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
     padding-bottom: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
 }

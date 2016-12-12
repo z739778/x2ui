@@ -1,6 +1,6 @@
 @import "../../../base/fn";
 
-.x2ui-cell_select {
+.cell-item_select {
     padding: 0;
     .x2ui-select {
         padding-right: 30px;
@@ -32,13 +32,13 @@
     padding-left: $x2uiCellGapH;
 }
 
-.x2ui-cell_select-before {
+.cell-item_select-before {
     padding-right:$x2uiCellGapH;
     .x2ui-select{
         width:$x2uiCellLabelWidth;
         box-sizing: border-box;
     }
-    .x2ui-cell__hd {
+    .cell-item__hd {
         position:relative;
         &:after {
             @include setRightLine($x2uiCellBorderColor);
@@ -61,7 +61,7 @@
     }
 }
 
-.x2ui-cell_select-after {
+.cell-item_select-after {
     padding-left:$x2uiCellGapH;
     .x2ui-select {
         padding-left:0;
