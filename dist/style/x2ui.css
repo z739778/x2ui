@@ -956,10 +956,10 @@ input[type="button"].btn-block {
   position: absolute;
   left: -9999em; }
 
-.cell-radio .cell-foot {
+.radio .cell-foot {
   padding-left: 0.35em; }
 
-.cell-radio .check:checked + .x2ui-icon-checked:before {
+.radio .check:checked + .x2ui-icon-checked:before {
   display: block;
   content: '\EA08';
   color: #09BB07;

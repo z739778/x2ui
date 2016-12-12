@@ -121,14 +121,14 @@ $x2uiSwitchHeight: 32px;
     left: -9999em;
 }
 
-.cell-radio{
+.radio{
     .cell-foot {
         padding-left: $x2uiCellInnerGapH;
     }
 }
 .check {
     // radio
-    .cell-radio & {
+    .radio & {
         &:checked {
             & + .x2ui-icon-checked {
                 &:before {
