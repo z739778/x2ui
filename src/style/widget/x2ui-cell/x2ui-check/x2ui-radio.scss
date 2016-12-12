@@ -1,14 +1,14 @@
 @import "../../../base/fn";
 
 // method2 accessbility
-.x2ui-cells_radio{
-    .x2ui-cell__ft {
+.cells-radio{
+    .cell-foot {
         padding-left: $x2uiCellInnerGapH;
     }
 }
 .x2ui-check {
     // radio
-    .x2ui-cells_radio & {
+    .cells-radio & {
         &:checked {
             & + .x2ui-icon-checked {
                 &:before {

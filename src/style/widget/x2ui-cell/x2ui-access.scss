@@ -1,12 +1,12 @@
 @import "../../base/fn";
 
-.x2ui-cell_access {
+.cell-access {
     @include setTapColor();
     color: inherit;
     &:active {
         background-color: #ECECEC;
     }
-    .x2ui-cell__ft {
+    .cell-foot {
         padding-right: 13px;
         position: relative;
         &:after {
@@ -19,11 +19,11 @@
         }
     }
 }
-.x2ui-cell_link{
+.cell_link{
     color: $x2uiLinkColorDefault;
     font-size: 14px;
 
-    // 由于x2ui-cell:first-child的:before为隐藏，所以这里要重新显示出来
+    // 由于cell:first-child的:before为隐藏，所以这里要重新显示出来
     &:first-child{
         &:before{
             display: block;
