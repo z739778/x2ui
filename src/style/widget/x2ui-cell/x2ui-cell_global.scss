@@ -1,6 +1,6 @@
 @import "../../base/fn";
 
-.cells {
+.x2ui-cells {
     margin-top: $x2uiCellsMarginTop;
     background-color: $x2uiCellBg;
     line-height: $x2uiCellLineHeight;
@@ -18,7 +18,7 @@
     }
 }
 
-.cells-title {
+.x2ui-cells__title {
     margin-top: .77em; // 15px - 行高
     margin-bottom: .3em; // 8px - 行高
     padding-left: $x2uiCellGapH;
@@ -26,12 +26,12 @@
     color: $x2uiTextColorGray;
     font-size: $x2uiCellTipsFontSize;
 
-    & + .cells {
+    & + .x2ui-cells {
         margin-top: 0;
     }
 }
 
-.cells__tips {
+.x2ui-cells__tips {
     margin-top: .3em; // 8px - 行高
     color: $x2uiTextColorGray;
     padding-left: $x2uiCellGapH;
@@ -39,7 +39,7 @@
     font-size: $x2uiCellTipsFontSize;
 }
 
-.cell {
+.x2ui-cell {
     padding: $x2uiCellGapV $x2uiCellGapH;
     position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
     display: flex;
@@ -55,13 +55,13 @@
         }
     }
 }
-.cell_primary{
+.x2ui-cell_primary{
     align-items: flex-start;
 }
-.cell-body{
+.x2ui-cell__bd{
     flex: 1;
 }
-.cell-foot {
+.x2ui-cell__ft {
     text-align: right;
     color: $x2uiTextColorGray;
 }

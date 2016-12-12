@@ -1,7 +1,7 @@
 @import "../../../base/fn";
 
-.cells-checkbox {
-    .cell-head {
+.x2ui-cells_checkbox {
+    .x2ui-cell__hd {
         padding-right: $x2uiCellInnerGapH;
     }
     .x2ui-icon-checked {
@@ -17,7 +17,7 @@
 // method2 accessbility
 .x2ui-check {
     // checkbox
-    .cells-checkbox & {
+    .x2ui-cells_checkbox & {
         &:checked {
             & + .x2ui-icon-checked {
                 &:before {

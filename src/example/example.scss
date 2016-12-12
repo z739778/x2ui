@@ -151,13 +151,13 @@ body, .page {
         //    background-color: #ECECEC;
         //}
     }
-    .cells{
+    .x2ui-cells{
         margin-top: 0;
         &:before, &:after{
             display: none;
         }
     }
-    .cell{
+    .x2ui-cell{
         padding-left: $pageHomePadding;
         padding-right: $pageHomePadding;
         &:before{
@@ -394,7 +394,7 @@ body, .page {
         display: none;
         margin-top: 0;
         font-size: 14px;
-        .cell-body{
+        .x2ui-cell__bd{
             padding:2px 0 2px 20px;
             color:#666;
         }
