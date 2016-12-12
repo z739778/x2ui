@@ -56,7 +56,7 @@
 .cell-primary{
     align-items: flex-start;
 }
-.x2ui-cell__bd{
+.cell-body{
     flex: 1;
 }
 .x2ui-cell__ft {
@@ -321,7 +321,7 @@
     .x2ui-select {
         padding-right: 30px;
     }
-    .x2ui-cell__bd{
+    .cell-body{
         &:after{
             content: " ";
             @include setArrow(right, 6px, #C8C8CD, 2px);
@@ -369,7 +369,7 @@
             margin-top: -4px;
         }
     }
-    .x2ui-cell__bd {
+    .cell-body {
         padding-left:$x2uiCellGapH;
         &:after{
             display:none;
