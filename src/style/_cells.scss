@@ -7,284 +7,293 @@ $cell-height: 44px;
 $cell-font-size:17px;
 $cell-tips-font-size:14px;
 $cell-label-width:105px;
-
 $cell-line-height: ($cell-height - 2 * $cell-gap-x) / $cell-font-size; // 高度为44px，减去上下padding的行高
 $cells-margin-top:20 / ($cell-font-size/($cell-font-size*0 + 1)) + em;
-
 // x2ui switch
 $switch-height: 32px;
 
+
 .cell-container {
-    margin-top: $cells-margin-top;
-    background-color: $cell-bg;
-    line-height: $cell-line-height;
-    font-size: $cell-font-size; //cell中间有效高度23px，跟客户端默认图标尺寸一致
-
-    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
-
-    // onepx
-    position: relative;
-    &:before {
-        @include setTopLine($cell-border-color);
-    }
-    &:after {
-        @include setBottomLine($cell-border-color);
-    }
+  margin-top: $cells-margin-top;
+  background-color: $cell-bg;
+  line-height: $cell-line-height;
+  font-size: $cell-font-size; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+  overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+  // onepx
+  position: relative;
+  &:before {
+    @include setTopLine($cell-border-color);
+  }
+  &:after {
+    @include setBottomLine($cell-border-color);
+  }
 }
 
 .cell-title {
-    margin-top: .77em; // 15px - 行高
-    margin-bottom: .3em; // 8px - 行高
-    padding-left: $cell-gap-y;
-    padding-right: $cell-gap-y;
-    color: $x2uiTextColorGray;
-    font-size: $cell-tips-font-size;
-
-    & + .cell-container {
-        margin-top: 0;
-    }
+  margin-top: .77em; // 15px - 行高
+  margin-bottom: .3em; // 8px - 行高
+  padding-left: $cell-gap-y;
+  padding-right: $cell-gap-y;
+  color: $x2uiTextColorGray;
+  font-size: $cell-tips-font-size;
+  & + .cell-container {
+    margin-top: 0;
+  }
 }
 
 .cell-tip {
-    margin-top: .3em; // 8px - 行高
-    color: $x2uiTextColorGray;
-    padding-left: $cell-gap-y;
-    padding-right: $cell-gap-y;
-    font-size: $cell-tips-font-size;
+  margin-top: .3em; // 8px - 行高
+  color: $x2uiTextColorGray;
+  padding-left: $cell-gap-y;
+  padding-right: $cell-gap-y;
+  font-size: $cell-tips-font-size;
 }
 
 .cell-item {
-    padding: $cell-gap-x $cell-gap-y;
-    position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
-    display: flex;
-    align-items: center;
+  padding: $cell-gap-x $cell-gap-y;
+  position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+  display: flex;
+  align-items: center;
+  &:before {
+    @include setTopLine($cell-border-color);
+    left: $cell-gap-y;
+    right: $cell-gap-y;
+  }
+  &:first-child {
     &:before {
-        @include setTopLine($cell-border-color);
-        left: $cell-gap-y;
-        right: $cell-gap-y;
+      display: none;
     }
-    &:first-child {
-        &:before {
-            display: none;
-        }
-    }
+  }
 }
-.cell-primary{
-    align-items: flex-start;
+
+.cell-primary {
+  align-items: flex-start;
 }
-.cell-body{
-    flex: 1;
+
+.cell-body {
+  flex: 1;
 }
+
 .cell-foot {
-    text-align: right;
-    color: $x2uiTextColorGray;
+  text-align: right;
+  color: $x2uiTextColorGray;
 }
+
 .cell-access {
-    @include setTapColor();
-    color: inherit;
-    &:active {
-        background-color: #ECECEC;
+  @include setTapColor();
+  color: inherit;
+  &:active {
+    background-color: #ECECEC;
+  }
+  .cell-foot {
+    padding-right: 13px;
+    position: relative;
+    &:after {
+      content: " ";
+      @include setArrow(right, 6px, #C8C8CD, 2px);
+      position: absolute;
+      top: 50%;
+      margin-top: -4px;
+      right: 2px;
     }
-    .cell-foot {
-        padding-right: 13px;
-        position: relative;
-        &:after {
-            content: " ";
-            @include setArrow(right, 6px, #C8C8CD, 2px);
-            position: absolute;
-            top: 50%;
-            margin-top: -4px;
-            right: 2px;
-        }
-    }
+  }
 }
-.cell-link{
-    color: $x2uiLinkColorDefault;
-    font-size: 14px;
 
-    // 由于cell-item:first-child的:before为隐藏，所以这里要重新显示出来
-    &:first-child{
-        &:before{
-            display: block;
-        }
+.cell-link {
+  color: $x2uiLinkColorDefault;
+  font-size: 14px;
+  // 由于cell-item:first-child的:before为隐藏，所以这里要重新显示出来
+  &:first-child {
+    &:before {
+      display: block;
     }
+  }
 }
+
 .check-label {
-    @include setTapColor();
-    &:active {
-        background-color: #ECECEC;
-    }
+  @include setTapColor();
+  &:active {
+    background-color: #ECECEC;
+  }
 }
 
-.check{
-    position: absolute;
-    left: -9999em;
-}
-
-.radio{
-    .cell-foot {
-        padding-left: $cell-inner-gap-y;
-    }
-}
 .check {
-    // radio
-    .radio & {
-        &:checked {
-            & + .x2ui-icon-checked {
-                &:before {
-                    display: block;
-                    content: '\EA08';
-                    color: #09BB07;
-                    font-size: 16px;
-                }
-            }
-        }
-    }
+  position: absolute;
+  left: -9999em;
 }
 
-.checkbox-container{
-    .cell-item-head {
-        padding-right: $cell-inner-gap-y;
-    }
-    .x2ui-icon-checked {
+.radio {
+  .cell-foot {
+    padding-left: $cell-inner-gap-y;
+  }
+}
+
+.check {
+  // radio
+  .radio & {
+    &:checked {
+      & + .x2ui-icon-checked {
         &:before {
-            content: '\EA01';
-            color: #C9C9C9;
-            font-size: 23px;
-            display: block;
+          display: block;
+          content: '\EA08';
+          color: #09BB07;
+          font-size: 16px;
         }
+      }
     }
+  }
+}
+
+.checkbox-container {
+  .cell-item-head {
+    padding-right: $cell-inner-gap-y;
+  }
+  .x2ui-icon-checked {
+    &:before {
+      content: '\EA01';
+      color: #C9C9C9;
+      font-size: 23px;
+      display: block;
+    }
+  }
 }
 
 // method2 accessbility
 .check {
-    // checkbox
-    .checkbox-container& {
-        &:checked {
-            & + .x2ui-icon-checked {
-                &:before {
-                    content: '\EA06';
-                    color: #09BB07;
-                }
-            }
+  // checkbox
+  .checkbox-container& {
+    &:checked {
+      & + .x2ui-icon-checked {
+        &:before {
+          content: '\EA06';
+          color: #09BB07;
         }
+      }
     }
+  }
 }
 
-.label{
-  display:block;
-  width:$cell-label-width;
+.label {
+  display: block;
+  width: $cell-label-width;
   @include text_wrap();
 }
+
 .input-item {
-    width: 100%;
-    border: 0;
-    outline: 0;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  height: $cell-line-height + em;
+  line-height: $cell-line-height;
+  // hides the spin-button
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    background-color: transparent;
-    font-size: inherit;
-    color: inherit;
-    height: $cell-line-height + em;
-    line-height: $cell-line-height;
-
-    // hides the spin-button
-    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
-        -webkit-appearance: none;
-        margin: 0;
-    }
+    margin: 0;
+  }
 }
+
 .textarea {
-    display: block;
-    border: 0;
-    resize: none;
-    width: 100%;
-    color: inherit;
-    font-size: 1em;
-    line-height: inherit;
-    outline: 0;
+  display: block;
+  border: 0;
+  resize: none;
+  width: 100%;
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  outline: 0;
 }
 
-.textarea-counter{
-    color: $x2uiTextColorTips;
-    text-align: right;
-    .cell-item_warn &{
-        color: $x2uiTextColorWarn;
-    }
+.textarea-counter {
+  color: $x2uiTextColorTips;
+  text-align: right;
+  .cell-item_warn & {
+    color: $x2uiTextColorWarn;
+  }
 }
 
 .cell-container-form {
-    .cell-foot{
-        font-size:0;
-    }
-    .x2ui-icon-warn{
-        display:none;
-    }
-    input, textarea, label[for]{
-        @include setTapColor();
-    }
+  .cell-foot {
+    font-size: 0;
+  }
+  .x2ui-icon-warn {
+    display: none;
+  }
+  input,
+  textarea,
+  label[for] {
+    @include setTapColor();
+  }
 }
 
 //switch
-.cell-item_switch{
-    padding-top: ($cell-height - $switch-height) / 2;
-    padding-bottom: ($cell-height - $switch-height) / 2;
+.cell-item_switch {
+  padding-top: ($cell-height - $switch-height) / 2;
+  padding-bottom: ($cell-height - $switch-height) / 2;
 }
-.switch{
-    appearance: none;
-}
-.switch,
-.switch-cp-box{
-    position: relative;
-    width: 52px;
-    height: $switch-height;
-    border: 1px solid #DFDFDF;
-    outline: 0;
-    border-radius: 16px;
-    box-sizing: border-box;
-    background-color: #DFDFDF;
-    transition: background-color .1s, border .1s;
 
-    &:before{
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: $switch-height - 2;
-        border-radius: 15px;
-        background-color: #FDFDFD;
-        transition:transform .35s cubic-bezier(0.45, 1, 0.4, 1);
-    }
-    &:after{
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: $switch-height - 2;
-        height: $switch-height - 2;
-        border-radius: 15px;
-        background-color: #FFFFFF;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-        transition:transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
-    }
+.switch {
+  appearance: none;
 }
+
+.switch,
+.switch-cp-box {
+  position: relative;
+  width: 52px;
+  height: $switch-height;
+  border: 1px solid #DFDFDF;
+  outline: 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: #DFDFDF;
+  transition: background-color .1s, border .1s;
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: $switch-height - 2;
+    border-radius: 15px;
+    background-color: #FDFDFD;
+    transition: transform .35s cubic-bezier(0.45, 1, 0.4, 1);
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $switch-height - 2;
+    height: $switch-height - 2;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    transition: transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+  }
+}
+
 .switch:checked,
-.switch-cp-input:checked ~ .switch-cp-box{
-    border-color: #04BE02;
-    background-color: #04BE02;
-    &:before {
-        transform: scale(0);
-    }
-    &:after {
-        transform: translateX(20px);
-    }
+.switch-cp-input:checked ~ .switch-cp-box {
+  border-color: #04BE02;
+  background-color: #04BE02;
+  &:before {
+    transform: scale(0);
+  }
+  &:after {
+    transform: translateX(20px);
+  }
 }
 
 // 兼容IE Edge的版本
-.switch-cp-input{
-    position: absolute;
-    left: -9999px;
+.switch-cp-input {
+  position: absolute;
+  left: -9999px;
 }
-.switch-cp-box{
-    display: block;
+
+.switch-cp-box {
+  display: block;
 }
