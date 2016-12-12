@@ -4,12 +4,12 @@
 @import "./icon/x2ui-icon_font";
 
 // cell
-@import "./widget/x2ui-cell/x2ui-cell_global";
+// @import "./widget/x2ui-cell/x2ui-cell_global";
 
-@import "./widget/x2ui-cell/x2ui-access";
-@import "./widget/x2ui-cell/x2ui-check";
-@import "./widget/x2ui-cell/x2ui-form";
-@import "./widget/x2ui-cell/x2ui-switch";
+// @import "./widget/x2ui-cell/x2ui-access";
+// @import "./widget/x2ui-cell/x2ui-check";
+// @import "./widget/x2ui-cell/x2ui-form";
+// @import "./widget/x2ui-cell/x2ui-switch";
 
 // msg
 @import "./widget/x2ui-page/x2ui-msg";
@@ -58,7 +58,7 @@
 // @import "tables";
 // @import "forms";
 @import "buttons";
-
+@import "cells";
 // Components
 // @import "animation";
 // @import "dropdown";

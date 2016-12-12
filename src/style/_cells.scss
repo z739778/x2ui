@@ -1,0 +1,482 @@
+.x2ui-cells {
+    margin-top: $x2uiCellsMarginTop;
+    background-color: $x2uiCellBg;
+    line-height: $x2uiCellLineHeight;
+    font-size: $x2uiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+
+    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+
+    // onepx
+    position: relative;
+    &:before {
+        @include setTopLine($x2uiCellBorderColor);
+    }
+    &:after {
+        @include setBottomLine($x2uiCellBorderColor);
+    }
+}
+
+.x2ui-cells__title {
+    margin-top: .77em; // 15px - 行高
+    margin-bottom: .3em; // 8px - 行高
+    padding-left: $x2uiCellGapH;
+    padding-right: $x2uiCellGapH;
+    color: $x2uiTextColorGray;
+    font-size: $x2uiCellTipsFontSize;
+
+    & + .x2ui-cells {
+        margin-top: 0;
+    }
+}
+
+.x2ui-cells__tips {
+    margin-top: .3em; // 8px - 行高
+    color: $x2uiTextColorGray;
+    padding-left: $x2uiCellGapH;
+    padding-right: $x2uiCellGapH;
+    font-size: $x2uiCellTipsFontSize;
+}
+
+.x2ui-cell {
+    padding: $x2uiCellGapV $x2uiCellGapH;
+    position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+    display: flex;
+    align-items: center;
+    &:before {
+        @include setTopLine($x2uiCellBorderColor);
+        left: $x2uiCellGapH;
+        right: $x2uiCellGapH;
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+.x2ui-cell_primary{
+    align-items: flex-start;
+}
+.x2ui-cell__bd{
+    flex: 1;
+}
+.x2ui-cell__ft {
+    text-align: right;
+    color: $x2uiTextColorGray;
+}
+.x2ui-cell_access {
+    @include setTapColor();
+    color: inherit;
+    &:active {
+        background-color: #ECECEC;
+    }
+    .x2ui-cell__ft {
+        padding-right: 13px;
+        position: relative;
+        &:after {
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            right: 2px;
+        }
+    }
+}
+.x2ui-cell_link{
+    color: $x2uiLinkColorDefault;
+    font-size: 14px;
+
+    // 由于x2ui-cell:first-child的:before为隐藏，所以这里要重新显示出来
+    &:first-child{
+        &:before{
+            display: block;
+        }
+    }
+}
+.x2ui-check__label {
+    @include setTapColor();
+    &:active {
+        background-color: #ECECEC;
+    }
+}
+
+.x2ui-check{
+    position: absolute;
+    left: -9999em;
+}
+
+.x2ui-cells_radio{
+    .x2ui-cell__ft {
+        padding-left: $x2uiCellInnerGapH;
+    }
+}
+.x2ui-check {
+    // radio
+    .x2ui-cells_radio & {
+        &:checked {
+            & + .x2ui-icon-checked {
+                &:before {
+                    display: block;
+                    content: '\EA08';
+                    color: #09BB07;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.x2ui-cells_checkbox {
+    .x2ui-cell__hd {
+        padding-right: $x2uiCellInnerGapH;
+    }
+    .x2ui-icon-checked {
+        &:before {
+            content: '\EA01';
+            color: #C9C9C9;
+            font-size: 23px;
+            display: block;
+        }
+    }
+}
+
+// method2 accessbility
+.x2ui-check {
+    // checkbox
+    .x2ui-cells_checkbox & {
+        &:checked {
+            & + .x2ui-icon-checked {
+                &:before {
+                    content: '\EA06';
+                    color: #09BB07;
+                }
+            }
+        }
+    }
+}
+
+.x2ui-form-preview{
+    position: relative;
+    background-color: #FFFFFF;
+    &:before{
+        @include setTopLine($x2uiCellBorderColor);
+    }
+    &:after{
+        @include setBottomLine($x2uiCellBorderColor);
+    }
+}
+.x2ui-form-preview__hd{
+    position: relative;
+    padding: $x2uiCellGapV $x2uiCellGapH;
+    text-align: right;
+    line-height: 2.5em;
+    &:after{
+        @include setBottomLine($x2uiCellBorderColor);
+        left: $x2uiCellGapH;
+    }
+    .x2ui-form-preview__value{
+        font-style: normal;
+        font-size: 1.6em;
+    }
+}
+.x2ui-form-preview__bd{
+    padding: $x2uiCellGapV $x2uiCellGapH;
+    font-size: .9em;
+    text-align: right;
+    color: $x2uiTextColorGray;
+    line-height: 2;
+}
+.x2ui-form-preview__ft{
+    position: relative;
+    line-height: 50px;
+    display: flex;
+    &:after {
+        @include setTopLine($x2uiDialogLineColor);
+    }
+}
+.x2ui-form-preview__item{
+    overflow: hidden;
+}
+.x2ui-form-preview__label{
+    float: left;
+    margin-right: 1em;
+    min-width: 4em;
+    color: $x2uiTextColorGray;
+    text-align: justify;
+    text-align-last: justify;
+}
+.x2ui-form-preview__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+}
+.x2ui-form-preview__btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: $x2uiDialogLinkColor;
+    text-align: center;
+    @include setTapColor();
+    button &{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        line-height: inherit;
+        font-size: inherit;
+    }
+    &:active {
+        background-color: $x2uiDialogLinkActiveBc;
+    }
+    &:after {
+        @include setLeftLine($x2uiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.x2ui-form-preview__btn_default {
+    color: $x2uiTextColorGray;
+}
+.x2ui-form-preview__btn_primary {
+    color: #0BB20C;
+}
+.x2ui-label{
+  display:block;
+  width:$x2uiCellLabelWidth;
+  @include text_wrap();
+}
+.x2ui-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: $x2uiCellLineHeight + em;
+    line-height: $x2uiCellLineHeight;
+
+    // hides the spin-button
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+.x2ui-textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    outline: 0;
+}
+
+.x2ui-textarea-counter{
+    color: $x2uiTextColorTips;
+    text-align: right;
+    .x2ui-cell_warn &{
+        color: $x2uiTextColorWarn;
+    }
+}
+
+.x2ui-toptips {
+    display:none;
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:5px;
+    font-size:14px;
+    text-align: center;
+    color: #FFF;
+    z-index: 5000;
+    @include text_wrap();
+}
+.x2ui-toptips_warn {
+    background-color: $x2uiColorWarn;
+}
+.x2ui-cells_form {
+    .x2ui-cell__ft{
+        font-size:0;
+    }
+    .x2ui-icon-warn{
+        display:none;
+    }
+    input, textarea, label[for]{
+        @include setTapColor();
+    }
+}
+.x2ui-cell_warn{
+    color:$x2uiTextColorWarn;
+    .x2ui-icon-warn{display:inline-block;}
+}
+.x2ui-cell_select {
+    padding: 0;
+    .x2ui-select {
+        padding-right: 30px;
+    }
+    .x2ui-cell__bd{
+        &:after{
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: $x2uiCellGapH;
+            margin-top: -4px;
+        }
+    }
+}
+
+.x2ui-select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: $x2uiCellHeight;
+    line-height: $x2uiCellHeight;
+    position: relative;
+    z-index: 1;
+    padding-left: $x2uiCellGapH;
+}
+
+.x2ui-cell_select-before {
+    padding-right:$x2uiCellGapH;
+    .x2ui-select{
+        width:$x2uiCellLabelWidth;
+        box-sizing: border-box;
+    }
+    .x2ui-cell__hd {
+        position:relative;
+        &:after {
+            @include setRightLine($x2uiCellBorderColor);
+        }
+        &:before{
+            content: " ";
+            @include setArrow(right, 6px, #C8C8CD, 2px);
+
+            position: absolute;
+            top: 50%;
+            right: $x2uiCellGapH;
+            margin-top: -4px;
+        }
+    }
+    .x2ui-cell__bd {
+        padding-left:$x2uiCellGapH;
+        &:after{
+            display:none;
+        }
+    }
+}
+
+.x2ui-cell_select-after {
+    padding-left:$x2uiCellGapH;
+    .x2ui-select {
+        padding-left:0;
+    }
+}
+
+.x2ui-cell_vcode {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.x2ui-vcode-img{
+    margin-left: 5px;
+    height: $x2uiCellHeight;
+    vertical-align: middle;
+}
+
+.x2ui-vcode-btn {
+    display: inline-block;
+    height: $x2uiCellHeight;
+    margin-left: 5px;
+    padding: 0 0.6em 0 0.7em;
+    border-left: 1px solid $x2uiLineColorLight;
+    line-height: $x2uiCellHeight;
+    vertical-align: middle;
+    font-size: $x2uiCellFontSize;
+    color: $x2uiDialogLinkColor;
+    &button{
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        outline: 0;
+    }
+    &:active {
+        color: desaturate($x2uiDialogLinkColor, 30%);
+    }
+}
+
+.x2ui-cell_switch{
+    padding-top: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
+    padding-bottom: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
+}
+.x2ui-switch{
+    appearance: none;
+}
+.x2ui-switch,
+.x2ui-switch-cp__box{
+    position: relative;
+    width: 52px;
+    height: $x2uiSwitchHeight;
+    border: 1px solid #DFDFDF;
+    outline: 0;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: #DFDFDF;
+    transition: background-color .1s, border .1s;
+
+    &:before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: $x2uiSwitchHeight - 2;
+        border-radius: 15px;
+        background-color: #FDFDFD;
+        transition:transform .35s cubic-bezier(0.45, 1, 0.4, 1);
+    }
+    &:after{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $x2uiSwitchHeight - 2;
+        height: $x2uiSwitchHeight - 2;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        transition:transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    }
+}
+.x2ui-switch:checked,
+.x2ui-switch-cp__input:checked ~ .x2ui-switch-cp__box{
+    border-color: #04BE02;
+    background-color: #04BE02;
+    &:before {
+        transform: scale(0);
+    }
+    &:after {
+        transform: translateX(20px);
+    }
+}
+
+// 兼容IE Edge的版本
+.x2ui-switch-cp__input{
+    position: absolute;
+    left: -9999px;
+}
+.x2ui-switch-cp__box{
+    display: block;
+}
