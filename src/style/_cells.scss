@@ -1,44 +1,44 @@
-$x2uiCellBg:#FFFFFF;
-$x2uiCellBorderColor:#D9D9D9;
-$x2uiCellGapV:10px;
-$x2uiCellGapH:15px;
-$x2uiCellInnerGapH:.35em;
-$x2uiCellHeight: 44px;
-$x2uiCellFontSize:17px;
-$x2uiCellTipsFontSize:14px;
-$x2uiCellLabelWidth:105px;
+$cell-bg:#FFFFFF;
+$cell-border-color:#D9D9D9;
+$cell-gap-x:10px;
+$cell-gap-y:15px;
+$cell-inner-gap-y:.35em;
+$cell-height: 44px;
+$cell-font-size:17px;
+$cell-tips-font-size:14px;
+$cell-label-width:105px;
 
-$x2uiCellLineHeight: ($x2uiCellHeight - 2 * $x2uiCellGapV) / $x2uiCellFontSize; // 高度为44px，减去上下padding的行高
-$x2uiCellsMarginTop:20 / ($x2uiCellFontSize/($x2uiCellFontSize*0 + 1)) + em;
+$cell-line-height: ($cell-height - 2 * $cell-gap-x) / $cell-font-size; // 高度为44px，减去上下padding的行高
+$cells-margin-top:20 / ($cell-font-size/($cell-font-size*0 + 1)) + em;
 
 // x2ui switch
 $x2uiSwitchHeight: 32px;
 
 .cell-container {
-    margin-top: $x2uiCellsMarginTop;
-    background-color: $x2uiCellBg;
-    line-height: $x2uiCellLineHeight;
-    font-size: $x2uiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+    margin-top: $cells-margin-top;
+    background-color: $cell-bg;
+    line-height: $cell-line-height;
+    font-size: $cell-font-size; //cell中间有效高度23px，跟客户端默认图标尺寸一致
 
     overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
 
     // onepx
     position: relative;
     &:before {
-        @include setTopLine($x2uiCellBorderColor);
+        @include setTopLine($cell-border-color);
     }
     &:after {
-        @include setBottomLine($x2uiCellBorderColor);
+        @include setBottomLine($cell-border-color);
     }
 }
 
 .cell-title {
     margin-top: .77em; // 15px - 行高
     margin-bottom: .3em; // 8px - 行高
-    padding-left: $x2uiCellGapH;
-    padding-right: $x2uiCellGapH;
+    padding-left: $cell-gap-y;
+    padding-right: $cell-gap-y;
     color: $x2uiTextColorGray;
-    font-size: $x2uiCellTipsFontSize;
+    font-size: $cell-tips-font-size;
 
     & + .cell-container {
         margin-top: 0;
@@ -48,20 +48,20 @@ $x2uiSwitchHeight: 32px;
 .cell-tip {
     margin-top: .3em; // 8px - 行高
     color: $x2uiTextColorGray;
-    padding-left: $x2uiCellGapH;
-    padding-right: $x2uiCellGapH;
-    font-size: $x2uiCellTipsFontSize;
+    padding-left: $cell-gap-y;
+    padding-right: $cell-gap-y;
+    font-size: $cell-tips-font-size;
 }
 
 .cell-item {
-    padding: $x2uiCellGapV $x2uiCellGapH;
+    padding: $cell-gap-x $cell-gap-y;
     position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
     display: flex;
     align-items: center;
     &:before {
-        @include setTopLine($x2uiCellBorderColor);
-        left: $x2uiCellGapH;
-        right: $x2uiCellGapH;
+        @include setTopLine($cell-border-color);
+        left: $cell-gap-y;
+        right: $cell-gap-y;
     }
     &:first-child {
         &:before {
@@ -123,7 +123,7 @@ $x2uiSwitchHeight: 32px;
 
 .radio{
     .cell-foot {
-        padding-left: $x2uiCellInnerGapH;
+        padding-left: $cell-inner-gap-y;
     }
 }
 .check {
@@ -144,7 +144,7 @@ $x2uiSwitchHeight: 32px;
 
 .checkbox-container{
     .cell-item-head {
-        padding-right: $x2uiCellInnerGapH;
+        padding-right: $cell-inner-gap-y;
     }
     .x2ui-icon-checked {
         &:before {
@@ -173,7 +173,7 @@ $x2uiSwitchHeight: 32px;
 
 .label{
   display:block;
-  width:$x2uiCellLabelWidth;
+  width:$cell-label-width;
   @include text_wrap();
 }
 .input-item {
@@ -184,8 +184,8 @@ $x2uiSwitchHeight: 32px;
     background-color: transparent;
     font-size: inherit;
     color: inherit;
-    height: $x2uiCellLineHeight + em;
-    line-height: $x2uiCellLineHeight;
+    height: $cell-line-height + em;
+    line-height: $cell-line-height;
 
     // hides the spin-button
     &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
@@ -226,8 +226,8 @@ $x2uiSwitchHeight: 32px;
 
 //switch
 .cell-item_switch{
-    padding-top: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
-    padding-bottom: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
+    padding-top: ($cell-height - $x2uiSwitchHeight) / 2;
+    padding-bottom: ($cell-height - $x2uiSwitchHeight) / 2;
 }
 .x2ui-switch{
     appearance: none;
