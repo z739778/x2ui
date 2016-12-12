@@ -116,7 +116,7 @@ $x2uiSwitchHeight: 32px;
     }
 }
 
-.x2ui-check{
+.check{
     position: absolute;
     left: -9999em;
 }
@@ -126,7 +126,7 @@ $x2uiSwitchHeight: 32px;
         padding-left: $x2uiCellInnerGapH;
     }
 }
-.x2ui-check {
+.check {
     // radio
     .cell-radio & {
         &:checked {
@@ -157,7 +157,7 @@ $x2uiSwitchHeight: 32px;
 }
 
 // method2 accessbility
-.x2ui-check {
+.check {
     // checkbox
     .cell-container-checkbox& {
         &:checked {

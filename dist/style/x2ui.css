@@ -952,14 +952,14 @@ input[type="button"].btn-block {
   .check-label:active {
     background-color: #ECECEC; }
 
-.x2ui-check {
+.check {
   position: absolute;
   left: -9999em; }
 
 .cell-radio .cell-foot {
   padding-left: 0.35em; }
 
-.cell-radio .x2ui-check:checked + .x2ui-icon-checked:before {
+.cell-radio .check:checked + .x2ui-icon-checked:before {
   display: block;
   content: '\EA08';
   color: #09BB07;
@@ -974,7 +974,7 @@ input[type="button"].btn-block {
   font-size: 23px;
   display: block; }
 
-.cell-container_checkbox .x2ui-check:checked + .x2ui-icon-checked:before {
+.cell-container_checkbox .check:checked + .x2ui-icon-checked:before {
   content: '\EA06';
   color: #09BB07; }
 
