@@ -1,3 +1,19 @@
+$x2uiCellBg:#FFFFFF;
+$x2uiCellBorderColor:#D9D9D9;
+$x2uiCellGapV:10px;
+$x2uiCellGapH:15px;
+$x2uiCellInnerGapH:.35em;
+$x2uiCellHeight: 44px;
+$x2uiCellFontSize:17px;
+$x2uiCellTipsFontSize:14px;
+$x2uiCellLabelWidth:105px;
+
+$x2uiCellLineHeight: ($x2uiCellHeight - 2 * $x2uiCellGapV) / $x2uiCellFontSize; // 高度为44px，减去上下padding的行高
+$x2uiCellsMarginTop:20 / ($x2uiCellFontSize/($x2uiCellFontSize*0 + 1)) + em;
+
+// x2ui switch
+$x2uiSwitchHeight: 32px;
+
 .cell-container {
     margin-top: $x2uiCellsMarginTop;
     background-color: $x2uiCellBg;
@@ -312,6 +328,8 @@
         @include setTapColor();
     }
 }
+
+//无用
 .cell-item_warn{
     color:$x2uiTextColorWarn;
     .x2ui-icon-warn{display:inline-block;}
@@ -417,6 +435,8 @@
     }
 }
 
+
+//switch
 .cell-item_switch{
     padding-top: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
     padding-bottom: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
