@@ -1,6 +1,6 @@
 @import "../../../base/fn";
 
-.x2ui-form-preview{
+.form-preview{
     position: relative;
     background-color: #FFFFFF;
     &:before{
@@ -10,7 +10,7 @@
         @include setBottomLine($x2uiCellBorderColor);
     }
 }
-.x2ui-form-preview__hd{
+.form-preview-head{
     position: relative;
     padding: $x2uiCellGapV $x2uiCellGapH;
     text-align: right;
@@ -19,19 +19,19 @@
         @include setBottomLine($x2uiCellBorderColor);
         left: $x2uiCellGapH;
     }
-    .x2ui-form-preview__value{
+    .form-preview-value{
         font-style: normal;
         font-size: 1.6em;
     }
 }
-.x2ui-form-preview__bd{
+.form-preview-body{
     padding: $x2uiCellGapV $x2uiCellGapH;
     font-size: .9em;
     text-align: right;
     color: $x2uiTextColorGray;
     line-height: 2;
 }
-.x2ui-form-preview__ft{
+.form-preview-foot{
     position: relative;
     line-height: 50px;
     display: flex;
@@ -39,10 +39,10 @@
         @include setTopLine($x2uiDialogLineColor);
     }
 }
-.x2ui-form-preview__item{
+.form-preview-item{
     overflow: hidden;
 }
-.x2ui-form-preview__label{
+.form-preview-label{
     float: left;
     margin-right: 1em;
     min-width: 4em;
@@ -50,13 +50,13 @@
     text-align: justify;
     text-align-last: justify;
 }
-.x2ui-form-preview__value{
+.form-preview-value{
     display: block;
     overflow: hidden;
     word-break:normal;
     word-wrap: break-word;
 }
-.x2ui-form-preview__btn {
+.form-preview-btn {
     position: relative;
     display: block;
     flex: 1;
@@ -82,9 +82,9 @@
         }
     }
 }
-.x2ui-form-preview__btn_default {
+.form-preview-btn-default {
     color: $x2uiTextColorGray;
 }
-.x2ui-form-preview__btn_primary {
+.form-preview-btn-primary {
     color: #0BB20C;
 }
