@@ -1,6 +1,6 @@
 @import "../../../base/fn";
 
-.x2ui-label{
+.label{
   display:block;
   width:$x2uiCellLabelWidth;
   @include text_wrap();

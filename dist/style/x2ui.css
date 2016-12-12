@@ -1114,7 +1114,7 @@ input[type="button"].btn-block {
 .x2ui-form-preview__btn_primary {
   color: #0BB20C; }
 
-.x2ui-label {
+.label {
   display: block;
   width: 105px;
   word-wrap: break-word;
@@ -1144,10 +1144,10 @@ input[type="button"].btn-block {
   line-height: inherit;
   outline: 0; }
 
-.x2ui-textarea-counter {
+.textarea-counter {
   color: #B2B2B2;
   text-align: right; }
-  .cell-item_warn .x2ui-textarea-counter {
+  .cell-item_warn .textarea-counter {
     color: #E64340; }
 
 .x2ui-toptips {
