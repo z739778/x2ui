@@ -59,17 +59,17 @@
 .cell-body{
     flex: 1;
 }
-.x2ui-cell__ft {
+.cell-foot {
     text-align: right;
     color: $x2uiTextColorGray;
 }
-.x2ui-cell_access {
+.cell-access {
     @include setTapColor();
     color: inherit;
     &:active {
         background-color: #ECECEC;
     }
-    .x2ui-cell__ft {
+    .cell-foot {
         padding-right: 13px;
         position: relative;
         &:after {
@@ -82,7 +82,7 @@
         }
     }
 }
-.x2ui-cell_link{
+.cell-link{
     color: $x2uiLinkColorDefault;
     font-size: 14px;
 
@@ -93,7 +93,7 @@
         }
     }
 }
-.x2ui-check__label {
+.check-label {
     @include setTapColor();
     &:active {
         background-color: #ECECEC;
@@ -105,14 +105,14 @@
     left: -9999em;
 }
 
-.x2ui-cells_radio{
-    .x2ui-cell__ft {
+.cell-radio{
+    .cell-foot {
         padding-left: $x2uiCellInnerGapH;
     }
 }
 .x2ui-check {
     // radio
-    .x2ui-cells_radio & {
+    .cell-radio & {
         &:checked {
             & + .x2ui-icon-checked {
                 &:before {
@@ -302,7 +302,7 @@
     background-color: $x2uiColorWarn;
 }
 .x2ui-cells_form {
-    .x2ui-cell__ft{
+    .cell-foot{
         font-size:0;
     }
     .x2ui-icon-warn{

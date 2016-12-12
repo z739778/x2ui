@@ -1,6 +1,6 @@
 @import "../../../base/fn";
 
-.x2ui-check__label {
+.check-label {
     @include setTapColor();
     &:active {
         background-color: #ECECEC;
