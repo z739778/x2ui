@@ -38,7 +38,7 @@
         width:$x2uiCellLabelWidth;
         box-sizing: border-box;
     }
-    .cell-item__hd {
+    .cell-item-head {
         position:relative;
         &:after {
             @include setRightLine($x2uiCellBorderColor);

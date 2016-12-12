@@ -126,8 +126,8 @@
     }
 }
 
-.cell-container_checkbox {
-    .cell-item__hd {
+.cell-container-checkbox{
+    .cell-item-head {
         padding-right: $x2uiCellInnerGapH;
     }
     .x2ui-icon-checked {
@@ -143,7 +143,7 @@
 // method2 accessbility
 .x2ui-check {
     // checkbox
-    .cell-container_checkbox & {
+    .cell-container-checkbox& {
         &:checked {
             & + .x2ui-icon-checked {
                 &:before {
@@ -354,7 +354,7 @@
         width:$x2uiCellLabelWidth;
         box-sizing: border-box;
     }
-    .cell-item__hd {
+    .cell-item-head {
         position:relative;
         &:after {
             @include setRightLine($x2uiCellBorderColor);
