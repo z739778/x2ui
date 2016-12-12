@@ -1166,16 +1166,16 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   word-break: break-all; }
 
-.toptips_warn {
+.toptips-warn {
   background-color: #E64340; }
 
-.cell-container_form .cell-foot {
+.cell-container-form .cell-foot {
   font-size: 0; }
 
-.cell-container_form .x2ui-icon-warn {
+.cell-container-form .x2ui-icon-warn {
   display: none; }
 
-.cell-container_form input, .cell-container_form textarea, .cell-container_form label[for] {
+.cell-container-form input, .cell-container-form textarea, .cell-container-form label[for] {
   -webkit-tap-highlight-color: transparent; }
 
 .cell-item_warn {
