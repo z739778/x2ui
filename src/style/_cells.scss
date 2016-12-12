@@ -12,7 +12,7 @@ $cell-line-height: ($cell-height - 2 * $cell-gap-x) / $cell-font-size; // 高度
 $cells-margin-top:20 / ($cell-font-size/($cell-font-size*0 + 1)) + em;
 
 // x2ui switch
-$x2uiSwitchHeight: 32px;
+$switch-height: 32px;
 
 .cell-container {
     margin-top: $cells-margin-top;
@@ -226,17 +226,17 @@ $x2uiSwitchHeight: 32px;
 
 //switch
 .cell-item_switch{
-    padding-top: ($cell-height - $x2uiSwitchHeight) / 2;
-    padding-bottom: ($cell-height - $x2uiSwitchHeight) / 2;
+    padding-top: ($cell-height - $switch-height) / 2;
+    padding-bottom: ($cell-height - $switch-height) / 2;
 }
-.x2ui-switch{
+.switch{
     appearance: none;
 }
-.x2ui-switch,
-.x2ui-switch-cp__box{
+.switch,
+.switch-cp-box{
     position: relative;
     width: 52px;
-    height: $x2uiSwitchHeight;
+    height: $switch-height;
     border: 1px solid #DFDFDF;
     outline: 0;
     border-radius: 16px;
@@ -250,7 +250,7 @@ $x2uiSwitchHeight: 32px;
         top: 0;
         left: 0;
         width: 50px;
-        height: $x2uiSwitchHeight - 2;
+        height: $switch-height - 2;
         border-radius: 15px;
         background-color: #FDFDFD;
         transition:transform .35s cubic-bezier(0.45, 1, 0.4, 1);
@@ -260,16 +260,16 @@ $x2uiSwitchHeight: 32px;
         position: absolute;
         top: 0;
         left: 0;
-        width: $x2uiSwitchHeight - 2;
-        height: $x2uiSwitchHeight - 2;
+        width: $switch-height - 2;
+        height: $switch-height - 2;
         border-radius: 15px;
         background-color: #FFFFFF;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
         transition:transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
     }
 }
-.x2ui-switch:checked,
-.x2ui-switch-cp__input:checked ~ .x2ui-switch-cp__box{
+.switch:checked,
+.switch-cp-input:checked ~ .switch-cp-box{
     border-color: #04BE02;
     background-color: #04BE02;
     &:before {
@@ -281,10 +281,10 @@ $x2uiSwitchHeight: 32px;
 }
 
 // 兼容IE Edge的版本
-.x2ui-switch-cp__input{
+.switch-cp-input{
     position: absolute;
     left: -9999px;
 }
-.x2ui-switch-cp__box{
+.switch-cp-box{
     display: block;
 }

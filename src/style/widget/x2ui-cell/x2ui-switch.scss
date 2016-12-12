@@ -4,11 +4,11 @@
     padding-top: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
     padding-bottom: ($x2uiCellHeight - $x2uiSwitchHeight) / 2;
 }
-.x2ui-switch{
+.switch{
     appearance: none;
 }
-.x2ui-switch,
-.x2ui-switch-cp__box{
+.switch,
+.switch-cp-box{
     position: relative;
     width: 52px;
     height: $x2uiSwitchHeight;
@@ -43,8 +43,8 @@
         transition:transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
     }
 }
-.x2ui-switch:checked,
-.x2ui-switch-cp__input:checked ~ .x2ui-switch-cp__box{
+.switch:checked,
+.switch-cp-input:checked ~ .switch-cp-box{
     border-color: #04BE02;
     background-color: #04BE02;
     &:before {
@@ -56,10 +56,10 @@
 }
 
 // 兼容IE Edge的版本
-.x2ui-switch-cp__input{
+.switch-cp-input{
     position: absolute;
     left: -9999px;
 }
-.x2ui-switch-cp__box{
+.switch-cp-box{
     display: block;
 }

@@ -1296,12 +1296,12 @@ input[type="button"].btn-block {
   padding-top: 6px;
   padding-bottom: 6px; }
 
-.x2ui-switch {
+.switch {
   -webkit-appearance: none;
           appearance: none; }
 
-.x2ui-switch,
-.x2ui-switch-cp__box {
+.switch,
+.switch-cp-box {
   position: relative;
   width: 52px;
   height: 32px;
@@ -1312,8 +1312,8 @@ input[type="button"].btn-block {
   background-color: #DFDFDF;
   -webkit-transition: background-color .1s, border .1s;
   transition: background-color .1s, border .1s; }
-  .x2ui-switch:before,
-  .x2ui-switch-cp__box:before {
+  .switch:before,
+  .switch-cp-box:before {
     content: " ";
     position: absolute;
     top: 0;
@@ -1326,8 +1326,8 @@ input[type="button"].btn-block {
     transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
     transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
     transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1), -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1); }
-  .x2ui-switch:after,
-  .x2ui-switch-cp__box:after {
+  .switch:after,
+  .switch-cp-box:after {
     content: " ";
     position: absolute;
     top: 0;
@@ -1342,24 +1342,24 @@ input[type="button"].btn-block {
     transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
     transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35), -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35); }
 
-.x2ui-switch:checked,
-.x2ui-switch-cp__input:checked ~ .x2ui-switch-cp__box {
+.switch:checked,
+.switch-cp-input:checked ~ .switch-cp-box {
   border-color: #04BE02;
   background-color: #04BE02; }
-  .x2ui-switch:checked:before,
-  .x2ui-switch-cp__input:checked ~ .x2ui-switch-cp__box:before {
+  .switch:checked:before,
+  .switch-cp-input:checked ~ .switch-cp-box:before {
     -webkit-transform: scale(0);
             transform: scale(0); }
-  .x2ui-switch:checked:after,
-  .x2ui-switch-cp__input:checked ~ .x2ui-switch-cp__box:after {
+  .switch:checked:after,
+  .switch-cp-input:checked ~ .switch-cp-box:after {
     -webkit-transform: translateX(20px);
             transform: translateX(20px); }
 
-.x2ui-switch-cp__input {
+.switch-cp-input {
   position: absolute;
   left: -9999px; }
 
-.x2ui-switch-cp__box {
+.switch-cp-box {
   display: block; }
 
 .align-baseline {
