@@ -1,16 +1,16 @@
 $cell-bg:#FFFFFF;
 $cell-border-color:#D9D9D9;
-$cell-gap-x:10px;
-$cell-gap-y:15px;
-$cell-inner-gap-y:.35em;
-$cell-height: 44px;
-$cell-font-size:17px;
-$cell-tips-font-size:14px;
-$cell-label-width:105px;
-$cell-line-height: ($cell-height - 2 * $cell-gap-x) / $cell-font-size; // 高度为44px，减去上下padding的行高
-$cells-margin-top:20 / ($cell-font-size/($cell-font-size*0 + 1)) + em;
+$cell-gap-x:1rem;
+$cell-gap-y:1.5rem;
+$cell-inner-gap-y:.35rem;
+$cell-height: 4.4rem;
+$cell-font-size:1.7rem;
+$cell-tips-font-size:1.4rem;
+$cell-label-width:10.5rem;
+$cell-line-height: ($cell-height - 2 * $cell-gap-x) / $cell-font-size; // 高度为4.4rem，减去上下padding的行高
+$cells-margin-top:20 / ($cell-font-size/($cell-font-size*0 + 1)) + rem;
 // x2ui switch
-$switch-height: 32px;
+$switch-height: 3.2rem;
 
 
 .cell-container {
@@ -30,8 +30,8 @@ $switch-height: 32px;
 }
 
 .cell-title {
-  margin-top: .77em; // 15px - 行高
-  margin-bottom: .3em; // 8px - 行高
+  margin-top: .77rem; // 15px - 行高
+  margin-bottom: .3rem; // 8px - 行高
   padding-left: $cell-gap-y;
   padding-right: $cell-gap-y;
   color: $x2uiTextColorGray;
@@ -42,7 +42,7 @@ $switch-height: 32px;
 }
 
 .cell-tip {
-  margin-top: .3em; // 8px - 行高
+  margin-top: .3rem; // 8px - 行高
   color: $x2uiTextColorGray;
   padding-left: $cell-gap-y;
   padding-right: $cell-gap-y;
@@ -86,22 +86,22 @@ $switch-height: 32px;
     background-color: #ECECEC;
   }
   .cell-foot {
-    padding-right: 13px;
+    padding-right: 1.3rem;
     position: relative;
     &:after {
       content: " ";
-      @include setArrow(right, 6px, #C8C8CD, 2px);
+      @include setArrow(right, .6rem, #C8C8CD, .2rem);
       position: absolute;
       top: 50%;
-      margin-top: -4px;
-      right: 2px;
+      margin-top: -.4rem;
+      right: .2rem;
     }
   }
 }
 
 .cell-link {
   color: $x2uiLinkColorDefault;
-  font-size: 14px;
+  font-size: 1.4rem;
   // 由于cell-item:first-child的:before为隐藏，所以这里要重新显示出来
   &:first-child {
     &:before {
@@ -137,7 +137,7 @@ $switch-height: 32px;
           display: block;
           content: '\EA08';
           color: #09BB07;
-          font-size: 16px;
+          font-size: 1.6rem;
         }
       }
     }
@@ -152,7 +152,7 @@ $switch-height: 32px;
     &:before {
       content: '\EA01';
       color: #C9C9C9;
-      font-size: 23px;
+      font-size: 2.3rem;
       display: block;
     }
   }
@@ -203,7 +203,7 @@ $switch-height: 32px;
   resize: none;
   width: 100%;
   color: inherit;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: inherit;
   outline: 0;
 }
@@ -243,11 +243,11 @@ $switch-height: 32px;
 .switch,
 .switch-cp-box {
   position: relative;
-  width: 52px;
+  width: 5.2rem;
   height: $switch-height;
   border: 1px solid #DFDFDF;
   outline: 0;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   box-sizing: border-box;
   background-color: #DFDFDF;
   transition: background-color .1s, border .1s;
@@ -256,9 +256,9 @@ $switch-height: 32px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 50px;
+    width: 5.0rem;
     height: $switch-height - 2;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     background-color: #FDFDFD;
     transition: transform .35s cubic-bezier(0.45, 1, 0.4, 1);
   }
