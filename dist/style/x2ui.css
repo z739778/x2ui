@@ -965,16 +965,16 @@ input[type="button"].btn-block {
   color: #09BB07;
   font-size: 16px; }
 
-.cell-container_checkbox .cell-item__hd {
+.checkbox-container .cell-item__hd {
   padding-right: 0.35em; }
 
-.cell-container_checkbox .x2ui-icon-checked:before {
+.checkbox-container .x2ui-icon-checked:before {
   content: '\EA01';
   color: #C9C9C9;
   font-size: 23px;
   display: block; }
 
-.cell-container_checkbox .check:checked + .x2ui-icon-checked:before {
+.checkbox-container .check:checked + .x2ui-icon-checked:before {
   content: '\EA06';
   color: #09BB07; }
 
@@ -1150,7 +1150,7 @@ input[type="button"].btn-block {
   .cell-item_warn .textarea-counter {
     color: #E64340; }
 
-.x2ui-toptips {
+.toptips {
   display: none;
   position: fixed;
   -webkit-transform: translateZ(0);
@@ -1166,7 +1166,7 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   word-break: break-all; }
 
-.x2ui-toptips_warn {
+.toptips_warn {
   background-color: #E64340; }
 
 .cell-container_form .cell-foot {
