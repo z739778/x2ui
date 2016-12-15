@@ -161,7 +161,7 @@ $switch-height: 3.2rem;
 // method2 accessbility
 .check {
   // checkbox
-  .checkbox-container& {
+  &.checkbox-container {
     &:checked {
       & + .x2ui-icon-checked {
         &:before {
